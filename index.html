@@ -3,119 +3,306 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIE 9990 - Organisational Psychology Revision</title>
+<title>CIE 9990 — ADHD Revision Notes</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap');
+
   :root {
-    --bg: #1a1a2e;
-    --surface: #16213e;
-    --card: #0f3460;
-    --accent: #e94560;
-    --accent2: #533483;
-    --text: #eee;
-    --text-muted: #a0a0b8;
-    --green: #00d2a0;
-    --yellow: #ffd166;
-    --blue: #4cc9f0;
-    --orange: #f77f00;
-    --border: #2a2a4a;
+    /* Warm dark palette */
+    --bg: #1E1E2E;
+    --surface: #313244;
+    --overlay: #45475A;
+    --text: #CDD6F4;
+    --text-sub: #A6ADC8;
+    --text-dim: #6C7086;
+
+    /* 4 accent colors — shifted to red-green axis for ADHD color perception */
+    --coral: #F2A999;    /* definitions, key terms (replaces amber — avoids blue-yellow deficit) */
+    --teal: #80CBC4;     /* concepts, headings, theories (replaces blue — leans green, not blue) */
+    --rose: #F38BA8;     /* exam tips, warnings, alerts */
+    --green: #A6E3A1;    /* studies, examples, connections */
+
+    --border: #45475A;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px;
+    font-family: 'Atkinson Hyperlegible Next', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 18px;
+    letter-spacing: 0.02em;
     padding-bottom: 80px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .top-nav {
-    position: sticky; top: 0; z-index: 100; background: var(--surface);
-    border-bottom: 2px solid var(--accent); padding: 10px 16px;
-    display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+
+  /* Progress bar - subtle, thin */
+  .progress-bar {
+    position: fixed; top: 0; left: 0; height: 2px;
+    background: var(--teal);
+    z-index: 200; transition: width 0.15s;
   }
-  .top-nav a {
-    flex-shrink: 0; padding: 6px 14px; border-radius: 20px; background: var(--card);
-    color: var(--text); text-decoration: none; font-size: 13px; font-weight: 600;
-    border: 1px solid var(--border); transition: all 0.2s;
+
+  /* NO sticky nav - research says it eats mobile screen space */
+  /* Just a minimal section indicator that appears on scroll */
+
+  /* Content - constrained for 35-45 chars per line on mobile */
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 20px;
   }
-  .top-nav a:hover, .top-nav a:active { background: var(--accent); border-color: var(--accent); }
-  .content { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+
+  /* Search - not sticky, just at top */
+  .search-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 16px 20px 0;
+  }
+  .search-wrap input {
+    width: 100%; padding: 12px 16px; border-radius: 12px;
+    border: 1px solid var(--border); background: var(--surface);
+    color: var(--text); font-size: 16px; outline: none;
+    font-family: inherit;
+  }
+  .search-wrap input:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(128,203,196,0.15);
+  }
+  .search-wrap input::placeholder { color: var(--text-dim); }
+
+  /* Headings - using teal accent */
   h1 {
-    font-size: 1.8rem; color: var(--accent); margin: 48px 0 16px;
-    padding-bottom: 8px; border-bottom: 3px solid var(--accent); line-height: 1.3;
+    font-size: 28px; font-weight: 700; color: var(--teal);
+    margin: 56px 0 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--teal); line-height: 1.3;
   }
-  h1:first-child { margin-top: 0; }
+  h1:first-child { margin-top: 8px; }
+
   h2 {
-    font-size: 1.4rem; color: var(--blue); margin: 36px 0 12px; padding: 8px 12px;
-    background: rgba(76, 201, 240, 0.1); border-left: 4px solid var(--blue);
-    border-radius: 0 8px 8px 0;
+    font-size: 22px; font-weight: 700; color: var(--teal);
+    margin: 48px 0 16px; padding: 12px 16px;
+    background: var(--surface);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 10px 10px 0;
   }
-  h3 { font-size: 1.15rem; color: var(--yellow); margin: 24px 0 10px; }
-  h4 { font-size: 1.05rem; color: var(--orange); margin: 20px 0 8px; }
-  p { margin: 10px 0; }
-  ul, ol { margin: 8px 0 8px 20px; }
-  li { margin: 4px 0; }
-  li ul { margin: 4px 0 4px 16px; }
-  strong { color: var(--yellow); }
-  em { color: var(--blue); font-style: italic; }
+
+  h3 {
+    font-size: 19px; font-weight: 600; color: var(--coral);
+    margin: 32px 0 12px;
+  }
+
+  h4 {
+    font-size: 18px; font-weight: 600; color: var(--text);
+    margin: 24px 0 10px;
+  }
+
+  p { margin: 12px 0; }
+  ul, ol { margin: 10px 0 10px 20px; }
+  li { margin: 6px 0; }
+  li ul { margin: 4px 0 4px 18px; }
+
+  /* Bold = coral for key terms (strategic, not excessive) */
+  strong { color: var(--coral); font-weight: 600; }
+
+  /* NO italic styling - research says it hurts ADHD readability */
+  /* Override italic to normal weight with teal color */
+  em {
+    font-style: normal;
+    color: var(--teal);
+    font-weight: 500;
+  }
+
+  /* Blockquotes - base style */
   blockquote {
-    background: var(--surface); border-left: 4px solid var(--green);
-    border-radius: 0 10px 10px 0; padding: 14px 16px; margin: 16px 0; font-size: 0.95rem;
+    background: var(--surface);
+    border-left: 4px solid var(--border);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 18px;
+    margin: 20px 0;
+    font-size: 17px;
   }
   blockquote p { margin: 4px 0; }
-  blockquote strong { color: var(--green); }
+
+  /* Blockquote color variants */
+  .bq-tldr {
+    border-color: var(--teal) !important;
+    background: rgba(128,203,196,0.07) !important;
+  }
+  .bq-tldr strong { color: var(--teal) !important; }
+
+  .bq-recall {
+    border-color: var(--rose) !important;
+    background: rgba(243,139,168,0.07) !important;
+  }
+  .bq-recall strong { color: var(--rose) !important; }
+
+  .bq-memory {
+    border-color: var(--coral) !important;
+    background: rgba(242,169,153,0.07) !important;
+  }
+  .bq-memory strong { color: var(--coral) !important; }
+
+  .bq-exam {
+    border-color: var(--rose) !important;
+    background: rgba(243,139,168,0.07) !important;
+  }
+  .bq-exam strong { color: var(--rose) !important; }
+
+  .bq-connection {
+    border-color: var(--green) !important;
+    background: rgba(166,227,161,0.07) !important;
+  }
+  .bq-connection strong { color: var(--green) !important; }
+
+  .bq-warning {
+    border-color: var(--rose) !important;
+    background: rgba(243,139,168,0.07) !important;
+  }
+  .bq-warning strong { color: var(--rose) !important; }
+
+  .bq-skeleton {
+    border-color: var(--teal) !important;
+    background: rgba(128,203,196,0.07) !important;
+  }
+  .bq-skeleton strong { color: var(--teal) !important; }
+
+  /* Emoji paragraph cards (fallback for non-blockquote emoji lines) */
+  .emoji-card {
+    border-left: 4px solid var(--border);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px; margin: 16px 0;
+    font-size: 17px; background: var(--surface);
+  }
+  .emoji-card.ec-hook    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
+  .emoji-card.ec-memory  { border-color: var(--coral); background: rgba(242,169,153,0.07); }
+  .emoji-card.ec-recall  { border-color: var(--rose); background: rgba(243,139,168,0.07); }
+  .emoji-card.ec-key     { border-color: var(--green); background: rgba(166,227,161,0.07); }
+  .emoji-card.ec-must    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
+  .emoji-card.ec-exam    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
+  .emoji-card.ec-link    { border-color: var(--green); background: rgba(166,227,161,0.07); }
+  .emoji-card.ec-warn    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
+
+  /* Tables - responsive, NO horizontal scroll */
   .table-wrap {
-    overflow-x: auto; margin: 14px 0; border-radius: 10px; border: 1px solid var(--border);
+    margin: 18px 0; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--surface);
+    overflow: hidden;
   }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 400px; }
-  thead { background: var(--card); }
+  /* On mobile, make tables block-layout (stacked) */
+  table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  thead { background: rgba(128,203,196,0.08); }
   th {
-    padding: 10px 12px; text-align: left; color: var(--blue); font-weight: 700;
-    border-bottom: 2px solid var(--accent); white-space: nowrap;
+    padding: 10px 14px; text-align: left; color: var(--teal);
+    font-weight: 600; border-bottom: 2px solid var(--border);
   }
-  td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  tr:nth-child(even) { background: rgba(255,255,255,0.03); }
-  tr:hover { background: rgba(76, 201, 240, 0.07); }
-  hr { border: none; height: 1px; background: var(--border); margin: 28px 0; }
+  td {
+    padding: 10px 14px; border-bottom: 1px solid rgba(69,71,90,0.5);
+    vertical-align: top;
+  }
+  tr:hover { background: rgba(128,203,196,0.04); }
+
+  /* Horizontal rules */
+  hr {
+    border: none; height: 1px;
+    background: var(--border);
+    margin: 48px 0;
+  }
   hr + hr { display: none; }
-  .part-header {
-    text-align: center; padding: 32px 16px 20px; margin: 48px -16px 24px;
-    background: linear-gradient(135deg, var(--accent2), var(--card)); border-radius: 12px;
+
+  /* Search highlight */
+  .highlight {
+    background: var(--rose); color: var(--bg);
+    padding: 1px 4px; border-radius: 3px; font-weight: 600;
   }
-  .part-header h1 { border: none; margin: 0; font-size: 1.6rem; }
+
+  /* === Scroll to top - floating, 48px touch target === */
   .scroll-top {
-    position: fixed; bottom: 20px; right: 20px; width: 48px; height: 48px;
-    border-radius: 50%; background: var(--accent); color: white; border: none;
-    font-size: 22px; cursor: pointer; display: none; align-items: center;
-    justify-content: center; box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4); z-index: 99;
+    position: fixed; bottom: 24px; right: 20px;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--teal); color: var(--bg);
+    border: none; font-size: 20px; font-weight: 700;
+    cursor: pointer; display: none;
+    align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    z-index: 99; transition: transform 0.2s, opacity 0.2s;
   }
+  .scroll-top:hover { transform: scale(1.1); }
   .scroll-top.visible { display: flex; }
-  .progress-bar {
-    position: fixed; top: 0; left: 0; height: 3px; background: var(--accent);
-    z-index: 200; transition: width 0.1s;
+  /* === Section progress bar (top) === */
+  .section-progress {
+    max-width: 680px; margin: 8px auto 0; padding: 0 20px;
+    display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-sub);
   }
-  .search-bar {
-    position: sticky; top: 50px; z-index: 90; padding: 8px 16px; background: var(--bg);
+  .section-progress .sp-dots { display: flex; gap: 4px; }
+  .section-progress .sp-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--overlay); transition: background 0.3s;
   }
-  .search-bar input {
-    width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
-    background: var(--surface); color: var(--text); font-size: 15px; outline: none;
+  .section-progress .sp-dot.done { background: var(--green); }
+
+  /* === H2 section badges === */
+  h2 { position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .read-time {
+    font-size: 12px; font-weight: 500; color: var(--teal);
+    background: rgba(128,203,196,0.1); padding: 2px 8px;
+    border-radius: 6px; white-space: nowrap;
   }
-  .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(233,69,96,0.3); }
-  .search-bar input::placeholder { color: var(--text-muted); }
-  .highlight { background: var(--accent); color: white; padding: 1px 3px; border-radius: 3px; }
+  .section-check {
+    width: 26px; height: 26px; border: 2px solid var(--overlay);
+    border-radius: 50%; background: transparent; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: transparent; transition: all 0.2s;
+    flex-shrink: 0; margin-left: auto;
+  }
+  .section-check:hover { border-color: var(--green); }
+  .section-check.checked {
+    border-color: var(--green); background: var(--green);
+    color: var(--bg);
+  }
+
+  /* === Quick Check hide/reveal === */
+  .bq-recall-hidden .bq-recall-content {
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+  .bq-recall-hidden.revealed .bq-recall-content {
+    max-height: 800px; opacity: 1;
+  }
+  .bq-recall-toggle {
+    cursor: pointer; color: var(--rose); font-weight: 600;
+    font-size: 15px; padding: 4px 0; user-select: none;
+  }
+
+  /* Mobile responsive */
   @media (max-width: 600px) {
-    body { font-size: 15px; }
-    h1 { font-size: 1.45rem; } h2 { font-size: 1.2rem; } h3 { font-size: 1.05rem; }
-    table { font-size: 0.82rem; } th, td { padding: 7px 8px; }
-    .content { padding: 14px 12px; } .top-nav { padding: 8px 10px; }
+    body { font-size: 18px; }
+    .content { padding: 16px 16px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; padding: 10px 14px; }
+    h3 { font-size: 18px; }
+    table { font-size: 15px; }
+    th, td { padding: 8px 10px; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   }
+
   @media (min-width: 768px) {
-    body { font-size: 17px; } .content { padding: 28px 24px; }
+    .content { padding: 32px 28px; }
   }
+
+  /* Print */
   @media print {
-    body { background: white; color: black; font-size: 12px; }
-    .top-nav, .search-bar, .scroll-top, .progress-bar { display: none !important; }
-    h1, h2, h3 { color: black; } blockquote { border-color: #333; background: #f5f5f5; }
-    table { min-width: auto; } a { color: black; }
+    body { background: white; color: #1a1a1a; font-size: 11pt; }
+    .search-wrap, .scroll-top, .progress-bar, .section-progress { display: none !important; }
+    h1, h2, h3 { color: #1a1a1a; page-break-after: avoid; }
+    blockquote, .emoji-card { border-color: #999; background: #f5f5f5; }
+    table { min-width: auto; } strong { color: #1a1a1a; }
+    .section-check, .read-time { display: none !important; }
   }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -125,129 +312,233 @@
 
 <div class="progress-bar" id="progressBar"></div>
 
-<nav class="top-nav">
-  <a href="#part1">1: Motivation</a>
-  <a href="#part2">2: Leadership</a>
-  <a href="#part3">3: Group Behaviour</a>
-  <a href="#part4">4: Culture & Conflict</a>
-</nav>
-
-<div class="search-bar">
-  <input type="text" id="searchInput" placeholder="Search notes... (e.g. Maslow, groupthink, Earley)">
+<div class="search-wrap">
+  <input type="text" id="searchInput" placeholder="Search notes...">
 </div>
 
+<div id="sectionProgress" class="section-progress" style="display:none;"></div>
+
 <div class="content" id="content">
-  <p style="color: var(--text-muted); text-align: center; padding: 40px 0;">Loading notes...</p>
+  <p style="color: var(--text-dim); text-align: center; padding: 40px 0;">Loading notes...</p>
 </div>
 
 <button class="scroll-top" id="scrollTop">&#8593;</button>
 
 <script>
 (async function() {
-  // Load the markdown file
+  const KEY = 'cieNotes_';
+  const contentEl = document.getElementById('content');
+
+  // === Load markdown ===
   let md;
   try {
-    const resp = await fetch('COMPLETE_REVISION_NOTES.md');
+    const resp = await fetch('TEST_chunk3_schizophrenia_criteria.md');
     md = await resp.text();
   } catch(e) {
-    document.getElementById('content').textContent = 'Could not load COMPLETE_REVISION_NOTES.md. Make sure this HTML file is in the same folder.';
+    contentEl.textContent = 'Could not load markdown file.';
     return;
   }
 
-  // Inject anchor IDs for parts
-  md = md.replace(/# PART 1: MOTIVATION AT WORK \(Pages 638-657\)/,
-    '<div id="part1" class="part-header"><h1>PART 1: MOTIVATION AT WORK</h1></div>\n');
-  md = md.replace(/# PART 2: LEADERSHIP & MANAGEMENT \(Pages 658-677\)/,
-    '<div id="part2" class="part-header"><h1>PART 2: LEADERSHIP & MANAGEMENT</h1></div>\n');
-  md = md.replace(/# PART 3: GROUP BEHAVIOUR & PERFORMANCE \(Pages 678-697\)/,
-    '<div id="part3" class="part-header"><h1>PART 3: GROUP BEHAVIOUR & PERFORMANCE</h1></div>\n');
-  md = md.replace(/# PART 4: GROUP PERFORMANCE ACROSS CULTURES & CONFLICT \(Pages 698-716\)/,
-    '<div id="part4" class="part-header"><h1>PART 4: CULTURE, EPM & CONFLICT</h1></div>\n');
-
-  // Configure marked
   marked.setOptions({ breaks: true, gfm: true });
-
-  // Custom renderer to wrap tables
   const renderer = new marked.Renderer();
   const origTable = renderer.table;
   renderer.table = function(header, body) {
-    const table = origTable.call(this, header, body);
-    return '<div class="table-wrap">' + table + '</div>';
+    return '<div class="table-wrap">' + origTable.call(this, header, body) + '</div>';
   };
 
   const rawHtml = marked.parse(md, { renderer: renderer });
-  // Sanitize with DOMPurify, allowing our custom classes and IDs
   const cleanHtml = DOMPurify.sanitize(rawHtml, {
     ADD_TAGS: ['div'],
-    ADD_ATTR: ['id', 'class']
+    ADD_ATTR: ['id', 'class', 'style']
+  });
+  contentEl.innerHTML = cleanHtml;
+
+  // === Style blockquotes by content ===
+  contentEl.querySelectorAll('blockquote').forEach(function(bq) {
+    const txt = bq.textContent;
+    if (/TLDR|30.second/i.test(txt)) bq.classList.add('bq-tldr');
+    else if (/Quick check|Quick Review/i.test(txt)) bq.classList.add('bq-recall');
+    else if (/Memory hook|Memory aid/i.test(txt)) bq.classList.add('bq-memory');
+    else if (/Exam tip|Study Tip/i.test(txt)) bq.classList.add('bq-exam');
+    else if (/Connection|Links? to|Link Back/i.test(txt)) bq.classList.add('bq-connection');
+    else if (/Don.*t confuse|Common mistake/i.test(txt)) bq.classList.add('bq-warning');
+    else if (/Exam Answer|Skeleton|Structure your/i.test(txt)) bq.classList.add('bq-skeleton');
   });
 
-  document.getElementById('content').innerHTML = cleanHtml;
+  // === Style emoji paragraphs ===
+  const emojiMap = [
+    { re: /^\uD83C\uDFAF/, cls: 'ec-hook' },
+    { re: /^\uD83D\uDCA1/, cls: 'ec-memory' },
+    { re: /^\uD83E\uDDE0/, cls: 'ec-recall' },
+    { re: /^\uD83D\uDD11/, cls: 'ec-key' },
+    { re: /^\u26A1/,       cls: 'ec-must' },
+    { re: /^\uD83D\uDCDD/, cls: 'ec-exam' },
+    { re: /^\uD83D\uDD17/, cls: 'ec-link' },
+    { re: /^\u26A0/,       cls: 'ec-warn' }
+  ];
+  contentEl.querySelectorAll('p').forEach(function(p) {
+    if (p.closest('blockquote')) return;
+    const ptxt = p.textContent.trim();
+    for (const em of emojiMap) {
+      if (em.re.test(ptxt)) { p.classList.add('emoji-card', em.cls); break; }
+    }
+  });
 
-  // Progress bar
+  // === Add IDs to h2s ===
+  const h2s = Array.from(contentEl.querySelectorAll('h2'));
+  h2s.forEach(function(h2, j) { h2.id = 'section-' + j; });
+
+  // =============================================
+  // FEATURE 1: Quick Check hide/reveal
+  // =============================================
+  contentEl.querySelectorAll('.bq-recall').forEach(function(bq) {
+    const children = Array.from(bq.childNodes);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'bq-recall-content';
+    children.forEach(function(c) { wrapper.appendChild(c); });
+    const toggle = document.createElement('div');
+    toggle.className = 'bq-recall-toggle';
+    toggle.textContent = 'Quick Check \u2014 tap to reveal';
+    bq.appendChild(toggle);
+    bq.appendChild(wrapper);
+    bq.classList.add('bq-recall-hidden');
+    toggle.addEventListener('click', function() {
+      bq.classList.toggle('revealed');
+      toggle.textContent = bq.classList.contains('revealed')
+        ? 'Quick Check \u2014 tap to hide'
+        : 'Quick Check \u2014 tap to reveal';
+    });
+  });
+
+  // =============================================
+  // FEATURE 4: Estimated reading time per section
+  // =============================================
+  h2s.forEach(function(h2, i) {
+    const nextH2 = h2s[i + 1];
+    let words = 0;
+    let el = h2.nextElementSibling;
+    while (el && el !== nextH2) {
+      words += (el.textContent || '').split(/\s+/).filter(Boolean).length;
+      el = el.nextElementSibling;
+    }
+    const mins = Math.max(1, Math.round(words / 200));
+    const badge = document.createElement('span');
+    badge.className = 'read-time';
+    badge.textContent = '~' + mins + ' min';
+    h2.appendChild(badge);
+  });
+
+  // =============================================
+  // FEATURE 2: Section progress tracking
+  // =============================================
+  const checkedSections = JSON.parse(localStorage.getItem(KEY + 'checked') || '{}');
+
+  function sectionKey(h2) {
+    return h2.id || h2.textContent.replace(/~\d+ min$/, '').trim();
+  }
+
+  function renderSectionProgress() {
+    const total = h2s.length;
+    const done = h2s.filter(function(h2) { return checkedSections[sectionKey(h2)]; }).length;
+    const progEl = document.getElementById('sectionProgress');
+    if (total === 0) { progEl.style.display = 'none'; return; }
+    progEl.style.display = 'flex';
+    // Build with DOM methods
+    progEl.textContent = '';
+    const label = document.createElement('span');
+    label.textContent = done + '/' + total + ' sections';
+    const dots = document.createElement('div');
+    dots.className = 'sp-dots';
+    h2s.forEach(function(h2) {
+      const dot = document.createElement('div');
+      dot.className = 'sp-dot' + (checkedSections[sectionKey(h2)] ? ' done' : '');
+      dots.appendChild(dot);
+    });
+    progEl.appendChild(label);
+    progEl.appendChild(dots);
+  }
+
+  h2s.forEach(function(h2) {
+    const btn = document.createElement('button');
+    btn.className = 'section-check';
+    btn.textContent = '\u2713';
+    btn.setAttribute('aria-label', 'Mark section complete');
+    const sk = sectionKey(h2);
+    if (checkedSections[sk]) btn.classList.add('checked');
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      checkedSections[sk] = !checkedSections[sk];
+      btn.classList.toggle('checked');
+      localStorage.setItem(KEY + 'checked', JSON.stringify(checkedSections));
+      renderSectionProgress();
+    });
+    h2.appendChild(btn);
+  });
+  renderSectionProgress();
+
+  // =============================================
+  // Scroll handler: progress bar + scroll to top
+  // =============================================
+  let ticking = false;
   window.addEventListener('scroll', function() {
-    var winScroll = document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById('progressBar').style.width = (winScroll / height * 100) + '%';
-    var btn = document.getElementById('scrollTop');
-    if (winScroll > 400) { btn.classList.add('visible'); }
-    else { btn.classList.remove('visible'); }
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (height > 0) {
+          document.getElementById('progressBar').style.width = (winScroll / height * 100) + '%';
+        }
+        const btn = document.getElementById('scrollTop');
+        if (winScroll > 500) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 
   document.getElementById('scrollTop').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Search with highlight
-  var searchTimeout;
-  document.getElementById('searchInput').addEventListener('input', function(e) {
+  // =============================================
+  // Search
+  // =============================================
+  let searchTimeout;
+  document.getElementById('searchInput').addEventListener('input', function(ev) {
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(function() {
-      var query = e.target.value.trim();
-      var content = document.getElementById('content');
-
-      // Remove old highlights
-      var marks = content.querySelectorAll('.highlight');
-      for (var i = 0; i < marks.length; i++) {
-        var parent = marks[i].parentNode;
-        parent.replaceChild(document.createTextNode(marks[i].textContent), marks[i]);
-        parent.normalize();
-      }
-
+      const query = ev.target.value.trim();
+      const cont = document.getElementById('content');
+      cont.querySelectorAll('.highlight').forEach(function(mark) {
+        const par = mark.parentNode;
+        par.replaceChild(document.createTextNode(mark.textContent), mark);
+        par.normalize();
+      });
       if (query.length < 2) return;
-
-      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
-      var textNodes = [];
+      const walker = document.createTreeWalker(cont, NodeFilter.SHOW_TEXT, null, false);
+      const textNodes = [];
       while (walker.nextNode()) {
         if (walker.currentNode.textContent.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
           textNodes.push(walker.currentNode);
         }
       }
-
-      var first = true;
-      for (var j = 0; j < textNodes.length; j++) {
-        var node = textNodes[j];
-        var idx = node.textContent.toLowerCase().indexOf(query.toLowerCase());
+      let first = true;
+      for (const node of textNodes) {
+        const idx = node.textContent.toLowerCase().indexOf(query.toLowerCase());
         if (idx === -1) continue;
-        var before = node.textContent.substring(0, idx);
-        var match = node.textContent.substring(idx, idx + query.length);
-        var after = node.textContent.substring(idx + query.length);
-
-        var span = document.createElement('span');
+        const before = node.textContent.substring(0, idx);
+        const match = node.textContent.substring(idx, idx + query.length);
+        const after = node.textContent.substring(idx + query.length);
+        const span = document.createElement('span');
         span.className = 'highlight';
         span.textContent = match;
-
-        var parent = node.parentNode;
-        var frag = document.createDocumentFragment();
+        const frag = document.createDocumentFragment();
         frag.appendChild(document.createTextNode(before));
         frag.appendChild(span);
         frag.appendChild(document.createTextNode(after));
-        parent.replaceChild(frag, node);
-
-        if (first) {
-          span.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          first = false;
-        }
+        node.parentNode.replaceChild(frag, node);
+        if (first) { span.scrollIntoView({ behavior: 'smooth', block: 'center' }); first = false; }
       }
     }, 300);
   });
