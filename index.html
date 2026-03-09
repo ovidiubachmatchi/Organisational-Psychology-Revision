@@ -3,30 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIE 9990 — ADHD Revision Notes</title>
+<title>CIE 9990 — Revision Notes</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap');
 
   :root {
-    /* Warm dark palette */
     --bg: #1E1E2E;
     --surface: #313244;
     --overlay: #45475A;
     --text: #CDD6F4;
     --text-sub: #A6ADC8;
     --text-dim: #6C7086;
-
-    /* 4 accent colors — shifted to red-green axis for ADHD color perception */
-    --coral: #F2A999;    /* definitions, key terms (replaces amber — avoids blue-yellow deficit) */
-    --teal: #80CBC4;     /* concepts, headings, theories (replaces blue — leans green, not blue) */
-    --rose: #F38BA8;     /* exam tips, warnings, alerts */
-    --green: #A6E3A1;    /* studies, examples, connections */
-
+    --coral: #F2A999;
+    --teal: #80CBC4;
+    --rose: #F38BA8;
+    --green: #A6E3A1;
     --border: #45475A;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; }
 
   body {
     font-family: 'Atkinson Hyperlegible Next', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -40,28 +36,37 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Progress bar - subtle, thin */
   .progress-bar {
     position: fixed; top: 0; left: 0; height: 2px;
     background: var(--teal);
-    z-index: 200; transition: width 0.15s;
+    z-index: 300; transition: width 0.15s;
   }
 
-  /* NO sticky nav - research says it eats mobile screen space */
-  /* Just a minimal section indicator that appears on scroll */
-
-  /* Content - constrained for 35-45 chars per line on mobile */
-  .content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 24px 20px;
+  .tab-bar {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 20px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .tab-btn {
+    padding: 5px 16px; border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--text-sub);
+    font-family: inherit; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+  .tab-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .tab-btn.active {
+    background: var(--teal); color: var(--bg);
+    border-color: var(--teal);
   }
 
-  /* Search - not sticky, just at top */
   .search-wrap {
     max-width: 680px;
     margin: 0 auto;
-    padding: 16px 20px 0;
+    padding: 14px 20px 0;
   }
   .search-wrap input {
     width: 100%; padding: 12px 16px; border-radius: 12px;
@@ -75,7 +80,21 @@
   }
   .search-wrap input::placeholder { color: var(--text-dim); }
 
-  /* Headings - using teal accent */
+  .section-progress {
+    max-width: 680px; margin: 8px auto 0; padding: 0 20px;
+    display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-sub);
+  }
+  .section-progress .sp-dots { display: flex; gap: 4px; flex-wrap: wrap; }
+  .section-progress .sp-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--overlay); transition: background 0.3s;
+  }
+  .section-progress .sp-dot.done { background: var(--green); }
+
+  .content { max-width: 680px; margin: 0 auto; padding: 24px 20px; }
+  .pane { display: none; }
+  .pane.active { display: block; }
+
   h1 {
     font-size: 28px; font-weight: 700; color: var(--teal);
     margin: 56px 0 20px; padding-bottom: 10px;
@@ -89,94 +108,43 @@
     background: var(--surface);
     border-left: 4px solid var(--teal);
     border-radius: 0 10px 10px 0;
+    position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   }
 
-  h3 {
-    font-size: 19px; font-weight: 600; color: var(--coral);
-    margin: 32px 0 12px;
-  }
-
-  h4 {
-    font-size: 18px; font-weight: 600; color: var(--text);
-    margin: 24px 0 10px;
-  }
-
+  h3 { font-size: 19px; font-weight: 600; color: var(--coral); margin: 32px 0 12px; }
+  h4 { font-size: 18px; font-weight: 600; color: var(--text); margin: 24px 0 10px; }
   p { margin: 12px 0; }
   ul, ol { margin: 10px 0 10px 20px; }
   li { margin: 6px 0; }
   li ul { margin: 4px 0 4px 18px; }
-
-  /* Bold = coral for key terms (strategic, not excessive) */
   strong { color: var(--coral); font-weight: 600; }
+  em { font-style: normal; color: var(--teal); font-weight: 500; }
 
-  /* NO italic styling - research says it hurts ADHD readability */
-  /* Override italic to normal weight with teal color */
-  em {
-    font-style: normal;
-    color: var(--teal);
-    font-weight: 500;
-  }
-
-  /* Blockquotes - base style */
   blockquote {
     background: var(--surface);
     border-left: 4px solid var(--border);
     border-radius: 0 10px 10px 0;
-    padding: 16px 18px;
-    margin: 20px 0;
-    font-size: 17px;
+    padding: 16px 18px; margin: 20px 0; font-size: 17px;
   }
   blockquote p { margin: 4px 0; }
-
-  /* Blockquote color variants */
-  .bq-tldr {
-    border-color: var(--teal) !important;
-    background: rgba(128,203,196,0.07) !important;
-  }
+  .bq-tldr    { border-color: var(--teal) !important; background: rgba(128,203,196,0.07) !important; }
   .bq-tldr strong { color: var(--teal) !important; }
-
-  .bq-recall {
-    border-color: var(--rose) !important;
-    background: rgba(243,139,168,0.07) !important;
-  }
+  .bq-recall  { border-color: var(--rose) !important; background: rgba(243,139,168,0.07) !important; }
   .bq-recall strong { color: var(--rose) !important; }
-
-  .bq-memory {
-    border-color: var(--coral) !important;
-    background: rgba(242,169,153,0.07) !important;
-  }
+  .bq-memory  { border-color: var(--coral) !important; background: rgba(242,169,153,0.07) !important; }
   .bq-memory strong { color: var(--coral) !important; }
-
-  .bq-exam {
-    border-color: var(--rose) !important;
-    background: rgba(243,139,168,0.07) !important;
-  }
+  .bq-exam    { border-color: var(--rose) !important; background: rgba(243,139,168,0.07) !important; }
   .bq-exam strong { color: var(--rose) !important; }
-
-  .bq-connection {
-    border-color: var(--green) !important;
-    background: rgba(166,227,161,0.07) !important;
-  }
+  .bq-connection { border-color: var(--green) !important; background: rgba(166,227,161,0.07) !important; }
   .bq-connection strong { color: var(--green) !important; }
-
-  .bq-warning {
-    border-color: var(--rose) !important;
-    background: rgba(243,139,168,0.07) !important;
-  }
+  .bq-warning { border-color: var(--rose) !important; background: rgba(243,139,168,0.07) !important; }
   .bq-warning strong { color: var(--rose) !important; }
-
-  .bq-skeleton {
-    border-color: var(--teal) !important;
-    background: rgba(128,203,196,0.07) !important;
-  }
+  .bq-skeleton { border-color: var(--teal) !important; background: rgba(128,203,196,0.07) !important; }
   .bq-skeleton strong { color: var(--teal) !important; }
 
-  /* Emoji paragraph cards (fallback for non-blockquote emoji lines) */
   .emoji-card {
-    border-left: 4px solid var(--border);
-    border-radius: 0 10px 10px 0;
-    padding: 14px 18px; margin: 16px 0;
-    font-size: 17px; background: var(--surface);
+    border-left: 4px solid var(--border); border-radius: 0 10px 10px 0;
+    padding: 14px 18px; margin: 16px 0; font-size: 17px; background: var(--surface);
   }
   .emoji-card.ec-hook    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
   .emoji-card.ec-memory  { border-color: var(--coral); background: rgba(242,169,153,0.07); }
@@ -187,67 +155,34 @@
   .emoji-card.ec-link    { border-color: var(--green); background: rgba(166,227,161,0.07); }
   .emoji-card.ec-warn    { border-color: var(--rose); background: rgba(243,139,168,0.07); }
 
-  /* Tables - responsive, NO horizontal scroll */
   .table-wrap {
     margin: 18px 0; border-radius: 10px;
-    border: 1px solid var(--border); background: var(--surface);
-    overflow: hidden;
+    border: 1px solid var(--border); background: var(--surface); overflow: hidden;
   }
-  /* On mobile, make tables block-layout (stacked) */
   table { width: 100%; border-collapse: collapse; font-size: 16px; }
   thead { background: rgba(128,203,196,0.08); }
-  th {
-    padding: 10px 14px; text-align: left; color: var(--teal);
-    font-weight: 600; border-bottom: 2px solid var(--border);
-  }
-  td {
-    padding: 10px 14px; border-bottom: 1px solid rgba(69,71,90,0.5);
-    vertical-align: top;
-  }
+  th { padding: 10px 14px; text-align: left; color: var(--teal); font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 10px 14px; border-bottom: 1px solid rgba(69,71,90,0.5); vertical-align: top; }
   tr:hover { background: rgba(128,203,196,0.04); }
-
-  /* Horizontal rules */
-  hr {
-    border: none; height: 1px;
-    background: var(--border);
-    margin: 48px 0;
-  }
+  hr { border: none; height: 1px; background: var(--border); margin: 48px 0; }
   hr + hr { display: none; }
+  .highlight { background: var(--rose); color: var(--bg); padding: 1px 4px; border-radius: 3px; font-weight: 600; }
 
-  /* Search highlight */
-  .highlight {
-    background: var(--rose); color: var(--bg);
-    padding: 1px 4px; border-radius: 3px; font-weight: 600;
-  }
-
-  /* === Scroll to top - floating, 48px touch target === */
-  .scroll-top {
+  .jump-btn {
     position: fixed; bottom: 24px; right: 20px;
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    background: var(--teal); color: var(--bg);
-    border: none; font-size: 20px; font-weight: 700;
+    padding: 10px 18px; border-radius: 24px;
+    background: var(--green); color: var(--bg);
+    border: none; font-size: 14px; font-weight: 700;
     cursor: pointer; display: none;
-    align-items: center; justify-content: center;
+    align-items: center; gap: 6px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4);
     z-index: 99; transition: transform 0.2s, opacity 0.2s;
+    font-family: inherit; white-space: nowrap; letter-spacing: 0.02em;
+    max-width: 280px; overflow: hidden; text-overflow: ellipsis;
   }
-  .scroll-top:hover { transform: scale(1.1); }
-  .scroll-top.visible { display: flex; }
-  /* === Section progress bar (top) === */
-  .section-progress {
-    max-width: 680px; margin: 8px auto 0; padding: 0 20px;
-    display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-sub);
-  }
-  .section-progress .sp-dots { display: flex; gap: 4px; }
-  .section-progress .sp-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--overlay); transition: background 0.3s;
-  }
-  .section-progress .sp-dot.done { background: var(--green); }
+  .jump-btn:hover { transform: scale(1.03); }
+  .jump-btn.visible { display: flex; }
 
-  /* === H2 section badges === */
-  h2 { position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .read-time {
     font-size: 12px; font-weight: 500; color: var(--teal);
     background: rgba(128,203,196,0.1); padding: 2px 8px;
@@ -261,25 +196,12 @@
     flex-shrink: 0; margin-left: auto;
   }
   .section-check:hover { border-color: var(--green); }
-  .section-check.checked {
-    border-color: var(--green); background: var(--green);
-    color: var(--bg);
-  }
+  .section-check.checked { border-color: var(--green); background: var(--green); color: var(--bg); }
 
-  /* === Quick Check hide/reveal === */
-  .bq-recall-hidden .bq-recall-content {
-    max-height: 0; overflow: hidden; opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-  }
-  .bq-recall-hidden.revealed .bq-recall-content {
-    max-height: 800px; opacity: 1;
-  }
-  .bq-recall-toggle {
-    cursor: pointer; color: var(--rose); font-weight: 600;
-    font-size: 15px; padding: 4px 0; user-select: none;
-  }
+  .bq-recall-hidden .bq-recall-content { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.4s ease, opacity 0.3s ease; }
+  .bq-recall-hidden.revealed .bq-recall-content { max-height: 800px; opacity: 1; }
+  .bq-recall-toggle { cursor: pointer; color: var(--rose); font-weight: 600; font-size: 15px; padding: 4px 0; user-select: none; }
 
-  /* Mobile responsive */
   @media (max-width: 600px) {
     body { font-size: 18px; }
     .content { padding: 16px 16px; }
@@ -290,18 +212,13 @@
     th, td { padding: 8px 10px; }
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   }
-
-  @media (min-width: 768px) {
-    .content { padding: 32px 28px; }
-  }
-
-  /* Print */
+  @media (min-width: 768px) { .content { padding: 32px 28px; } }
   @media print {
     body { background: white; color: #1a1a1a; font-size: 11pt; }
-    .search-wrap, .scroll-top, .progress-bar, .section-progress { display: none !important; }
+    .tab-bar, .search-wrap, .scroll-top, .progress-bar, .section-progress { display: none !important; }
     h1, h2, h3 { color: #1a1a1a; page-break-after: avoid; }
     blockquote, .emoji-card { border-color: #999; background: #f5f5f5; }
-    table { min-width: auto; } strong { color: #1a1a1a; }
+    strong { color: #1a1a1a; }
     .section-check, .read-time { display: none !important; }
   }
 </style>
@@ -312,31 +229,45 @@
 
 <div class="progress-bar" id="progressBar"></div>
 
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="notes">Notes</button>
+  <button class="tab-btn" data-tab="studies">Studies</button>
+</div>
+
 <div class="search-wrap">
   <input type="text" id="searchInput" placeholder="Search notes...">
 </div>
 
 <div id="sectionProgress" class="section-progress" style="display:none;"></div>
 
-<div class="content" id="content">
-  <p style="color: var(--text-dim); text-align: center; padding: 40px 0;">Loading notes...</p>
+<div class="content">
+  <div class="pane active" id="pane-notes">
+    <p style="color:var(--text-dim);text-align:center;padding:40px 0;">Loading notes...</p>
+  </div>
+  <div class="pane" id="pane-studies">
+    <p style="color:var(--text-dim);text-align:center;padding:40px 0;">Loading studies...</p>
+  </div>
 </div>
 
-<button class="scroll-top" id="scrollTop">&#8593;</button>
+<button class="jump-btn" id="jumpBtn"></button>
 
 <script>
 (async function() {
-  const KEY = 'cieNotes_';
-  const contentEl = document.getElementById('content');
+  // Disable browser's native scroll restoration — we handle it manually
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
-  // === Load markdown ===
-  let md;
-  try {
-    const resp = await fetch('TEST_chunk3_schizophrenia_criteria.md');
-    md = await resp.text();
-  } catch(e) {
-    contentEl.textContent = 'Could not load markdown file.';
-    return;
+  const KEY = 'cieNotes_';
+  let activeTab = localStorage.getItem(KEY + 'activeTab') || 'notes';
+  const scrollKeys = { notes: KEY + 'scroll_notes', studies: KEY + 'scroll_studies' };
+
+  function saveScroll() {
+    localStorage.setItem(scrollKeys[activeTab], String(window.scrollY));
+  }
+
+  function restoreScroll(tab) {
+    const saved = parseInt(localStorage.getItem(scrollKeys[tab]) || '0', 10);
+    if (!saved) return;
+    window.scrollTo(0, saved);
   }
 
   marked.setOptions({ breaks: true, gfm: true });
@@ -346,26 +277,12 @@
     return '<div class="table-wrap">' + origTable.call(this, header, body) + '</div>';
   };
 
-  const rawHtml = marked.parse(md, { renderer: renderer });
-  const cleanHtml = DOMPurify.sanitize(rawHtml, {
-    ADD_TAGS: ['div'],
-    ADD_ATTR: ['id', 'class', 'style']
-  });
-  contentEl.innerHTML = cleanHtml;
+  function renderMd(md) {
+    const raw = marked.parse(md, { renderer: renderer });
+    // DOMPurify sanitizes all HTML before setting innerHTML
+    return DOMPurify.sanitize(raw, { ADD_TAGS: ['div'], ADD_ATTR: ['id', 'class', 'style'] });
+  }
 
-  // === Style blockquotes by content ===
-  contentEl.querySelectorAll('blockquote').forEach(function(bq) {
-    const txt = bq.textContent;
-    if (/TLDR|30.second/i.test(txt)) bq.classList.add('bq-tldr');
-    else if (/Quick check|Quick Review/i.test(txt)) bq.classList.add('bq-recall');
-    else if (/Memory hook|Memory aid/i.test(txt)) bq.classList.add('bq-memory');
-    else if (/Exam tip|Study Tip/i.test(txt)) bq.classList.add('bq-exam');
-    else if (/Connection|Links? to|Link Back/i.test(txt)) bq.classList.add('bq-connection');
-    else if (/Don.*t confuse|Common mistake/i.test(txt)) bq.classList.add('bq-warning');
-    else if (/Exam Answer|Skeleton|Structure your/i.test(txt)) bq.classList.add('bq-skeleton');
-  });
-
-  // === Style emoji paragraphs ===
   const emojiMap = [
     { re: /^\uD83C\uDFAF/, cls: 'ec-hook' },
     { re: /^\uD83D\uDCA1/, cls: 'ec-memory' },
@@ -376,110 +293,167 @@
     { re: /^\uD83D\uDD17/, cls: 'ec-link' },
     { re: /^\u26A0/,       cls: 'ec-warn' }
   ];
-  contentEl.querySelectorAll('p').forEach(function(p) {
-    if (p.closest('blockquote')) return;
-    const ptxt = p.textContent.trim();
-    for (const em of emojiMap) {
-      if (em.re.test(ptxt)) { p.classList.add('emoji-card', em.cls); break; }
-    }
-  });
 
-  // === Add IDs to h2s ===
-  const h2s = Array.from(contentEl.querySelectorAll('h2'));
-  h2s.forEach(function(h2, j) { h2.id = 'section-' + j; });
-
-  // =============================================
-  // FEATURE 1: Quick Check hide/reveal
-  // =============================================
-  contentEl.querySelectorAll('.bq-recall').forEach(function(bq) {
-    const children = Array.from(bq.childNodes);
-    const wrapper = document.createElement('div');
-    wrapper.className = 'bq-recall-content';
-    children.forEach(function(c) { wrapper.appendChild(c); });
-    const toggle = document.createElement('div');
-    toggle.className = 'bq-recall-toggle';
-    toggle.textContent = 'Quick Check \u2014 tap to reveal';
-    bq.appendChild(toggle);
-    bq.appendChild(wrapper);
-    bq.classList.add('bq-recall-hidden');
-    toggle.addEventListener('click', function() {
-      bq.classList.toggle('revealed');
-      toggle.textContent = bq.classList.contains('revealed')
-        ? 'Quick Check \u2014 tap to hide'
-        : 'Quick Check \u2014 tap to reveal';
+  function applyFeatures(el, tabId) {
+    el.querySelectorAll('blockquote').forEach(function(bq) {
+      const txt = bq.textContent;
+      if (/TLDR|30.second/i.test(txt))              bq.classList.add('bq-tldr');
+      else if (/Quick check|Quick Review/i.test(txt)) bq.classList.add('bq-recall');
+      else if (/Memory hook|Memory aid/i.test(txt))   bq.classList.add('bq-memory');
+      else if (/Exam tip|Study Tip/i.test(txt))        bq.classList.add('bq-exam');
+      else if (/Connection|Links? to|Link Back/i.test(txt)) bq.classList.add('bq-connection');
+      else if (/Don.*t confuse|Common mistake/i.test(txt))  bq.classList.add('bq-warning');
+      else if (/Exam Answer|Skeleton|Structure your/i.test(txt)) bq.classList.add('bq-skeleton');
     });
-  });
 
-  // =============================================
-  // FEATURE 4: Estimated reading time per section
-  // =============================================
-  h2s.forEach(function(h2, i) {
-    const nextH2 = h2s[i + 1];
-    let words = 0;
-    let el = h2.nextElementSibling;
-    while (el && el !== nextH2) {
-      words += (el.textContent || '').split(/\s+/).filter(Boolean).length;
-      el = el.nextElementSibling;
+    el.querySelectorAll('p').forEach(function(p) {
+      if (p.closest('blockquote')) return;
+      const ptxt = p.textContent.trim();
+      for (const em of emojiMap) {
+        if (em.re.test(ptxt)) { p.classList.add('emoji-card', em.cls); break; }
+      }
+    });
+
+    const h2s = Array.from(el.querySelectorAll('h2'));
+    h2s.forEach(function(h2, j) { h2.id = tabId + '-s' + j; });
+
+    el.querySelectorAll('.bq-recall').forEach(function(bq) {
+      const children = Array.from(bq.childNodes);
+      const wrapper = document.createElement('div');
+      wrapper.className = 'bq-recall-content';
+      children.forEach(function(c) { wrapper.appendChild(c); });
+      const toggle = document.createElement('div');
+      toggle.className = 'bq-recall-toggle';
+      toggle.textContent = 'Quick Check \u2014 tap to reveal';
+      bq.appendChild(toggle);
+      bq.appendChild(wrapper);
+      bq.classList.add('bq-recall-hidden');
+      toggle.addEventListener('click', function() {
+        bq.classList.toggle('revealed');
+        toggle.textContent = bq.classList.contains('revealed')
+          ? 'Quick Check \u2014 tap to hide'
+          : 'Quick Check \u2014 tap to reveal';
+      });
+    });
+
+    h2s.forEach(function(h2, i) {
+      const nextH2 = h2s[i + 1];
+      let words = 0;
+      let node = h2.nextElementSibling;
+      while (node && node !== nextH2) {
+        words += (node.textContent || '').split(/\s+/).filter(Boolean).length;
+        node = node.nextElementSibling;
+      }
+      const mins = Math.max(1, Math.round(words / 200));
+      const badge = document.createElement('span');
+      badge.className = 'read-time';
+      badge.textContent = '~' + mins + ' min';
+      h2.appendChild(badge);
+    });
+
+    const checkedKey = KEY + 'checked_' + tabId;
+    const checkedSections = JSON.parse(localStorage.getItem(checkedKey) || '{}');
+
+    function sk(h2) { return h2.id || h2.textContent.replace(/~\d+ min$/, '').trim(); }
+
+    function renderProgress() {
+      if (activeTab !== tabId) return;
+      const total = h2s.length;
+      const done = h2s.filter(function(h2) { return checkedSections[sk(h2)]; }).length;
+      const progEl = document.getElementById('sectionProgress');
+      if (total === 0) { progEl.style.display = 'none'; return; }
+      progEl.style.display = 'flex';
+      progEl.textContent = '';
+      const label = document.createElement('span');
+      label.textContent = done + '/' + total + ' sections';
+      const dots = document.createElement('div');
+      dots.className = 'sp-dots';
+      h2s.forEach(function(h2) {
+        const dot = document.createElement('div');
+        dot.className = 'sp-dot' + (checkedSections[sk(h2)] ? ' done' : '');
+        dots.appendChild(dot);
+      });
+      progEl.appendChild(label);
+      progEl.appendChild(dots);
     }
-    const mins = Math.max(1, Math.round(words / 200));
-    const badge = document.createElement('span');
-    badge.className = 'read-time';
-    badge.textContent = '~' + mins + ' min';
-    h2.appendChild(badge);
-  });
 
-  // =============================================
-  // FEATURE 2: Section progress tracking
-  // =============================================
-  const checkedSections = JSON.parse(localStorage.getItem(KEY + 'checked') || '{}');
-
-  function sectionKey(h2) {
-    return h2.id || h2.textContent.replace(/~\d+ min$/, '').trim();
-  }
-
-  function renderSectionProgress() {
-    const total = h2s.length;
-    const done = h2s.filter(function(h2) { return checkedSections[sectionKey(h2)]; }).length;
-    const progEl = document.getElementById('sectionProgress');
-    if (total === 0) { progEl.style.display = 'none'; return; }
-    progEl.style.display = 'flex';
-    // Build with DOM methods
-    progEl.textContent = '';
-    const label = document.createElement('span');
-    label.textContent = done + '/' + total + ' sections';
-    const dots = document.createElement('div');
-    dots.className = 'sp-dots';
     h2s.forEach(function(h2) {
-      const dot = document.createElement('div');
-      dot.className = 'sp-dot' + (checkedSections[sectionKey(h2)] ? ' done' : '');
-      dots.appendChild(dot);
+      const btn = document.createElement('button');
+      btn.className = 'section-check';
+      btn.textContent = '\u2713';
+      btn.setAttribute('aria-label', 'Mark section complete');
+      if (checkedSections[sk(h2)]) btn.classList.add('checked');
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        checkedSections[sk(h2)] = !checkedSections[sk(h2)];
+        btn.classList.toggle('checked');
+        localStorage.setItem(checkedKey, JSON.stringify(checkedSections));
+        renderProgress();
+      });
+      h2.appendChild(btn);
     });
-    progEl.appendChild(label);
-    progEl.appendChild(dots);
+
+    el._renderProgress = renderProgress;
   }
 
-  h2s.forEach(function(h2) {
-    const btn = document.createElement('button');
-    btn.className = 'section-check';
-    btn.textContent = '\u2713';
-    btn.setAttribute('aria-label', 'Mark section complete');
-    const sk = sectionKey(h2);
-    if (checkedSections[sk]) btn.classList.add('checked');
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      checkedSections[sk] = !checkedSections[sk];
-      btn.classList.toggle('checked');
-      localStorage.setItem(KEY + 'checked', JSON.stringify(checkedSections));
-      renderSectionProgress();
-    });
-    h2.appendChild(btn);
-  });
-  renderSectionProgress();
+  const files = {
+    notes:   'NOTES_chunk3_schizophrenia_criteria.md',
+    studies: 'STUDIES_chunk3_schizophrenia_criteria.md'
+  };
 
-  // =============================================
-  // Scroll handler: progress bar + scroll to top
-  // =============================================
+  async function loadPane(tabId) {
+    const el = document.getElementById('pane-' + tabId);
+    try {
+      const resp = await fetch(files[tabId]);
+      const md = await resp.text();
+      // renderMd uses DOMPurify.sanitize before assignment
+      el.innerHTML = renderMd(md);
+      applyFeatures(el, tabId);
+    } catch(e) {
+      el.innerHTML = '<p style="color:var(--rose);padding:40px 0;text-align:center;">Could not load ' + files[tabId] + '</p>';
+    }
+  }
+
+  await Promise.all([loadPane('notes'), loadPane('studies')]);
+
+  function switchTab(tab) {
+    saveScroll();
+    activeTab = tab;
+    localStorage.setItem(KEY + 'activeTab', tab);
+
+    document.querySelectorAll('.tab-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+    document.querySelectorAll('.pane').forEach(function(pane) {
+      pane.classList.toggle('active', pane.id === 'pane-' + tab);
+    });
+
+    const pane = document.getElementById('pane-' + tab);
+    if (pane._renderProgress) pane._renderProgress();
+    if (tab !== 'notes' && jumpBtn) { jumpBtn.classList.remove('visible'); currentStudyName = null; }
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchTab(btn.dataset.tab);
+      restoreScroll(btn.dataset.tab);
+    });
+  });
+
+  // Read BEFORE switchTab — switchTab calls saveScroll() which would overwrite with scrollY=0
+  var savedOnLoad = parseInt(localStorage.getItem(scrollKeys[activeTab]) || '0', 10);
+
+  setupJumpObserver();
+  switchTab(activeTab);
+
+  if (savedOnLoad) {
+    document.fonts.ready.then(function() {
+      window.scrollTo(0, savedOnLoad);
+    });
+  }
+
   let ticking = false;
+  let scrollSaveTimer;
   window.addEventListener('scroll', function() {
     if (!ticking) {
       window.requestAnimationFrame(function() {
@@ -488,28 +462,72 @@
         if (height > 0) {
           document.getElementById('progressBar').style.width = (winScroll / height * 100) + '%';
         }
-        const btn = document.getElementById('scrollTop');
-        if (winScroll > 500) btn.classList.add('visible');
-        else btn.classList.remove('visible');
         ticking = false;
       });
       ticking = true;
     }
+    clearTimeout(scrollSaveTimer);
+    scrollSaveTimer = setTimeout(saveScroll, 200);
   });
 
-  document.getElementById('scrollTop').addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // === Jump-to-Study button via IntersectionObserver ===
+  var jumpBtn = document.getElementById('jumpBtn');
+  var currentStudyName = null;
+
+  function setupJumpObserver() {
+    var notesPane = document.getElementById('pane-notes');
+    var placeholders = Array.from(notesPane.querySelectorAll('blockquote p, blockquote')).filter(function(el) {
+      return el.textContent.includes('[Study:');
+    });
+    if (!placeholders.length || !window.IntersectionObserver) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      var hit = null;
+      entries.forEach(function(e) { if (e.isIntersecting) hit = e.target; });
+      // Scan all to find topmost in viewport
+      var topmost = null;
+      placeholders.forEach(function(p) {
+        var r = p.getBoundingClientRect();
+        if (r.top >= -20 && r.bottom <= window.innerHeight + 20) topmost = p;
+      });
+      if (topmost && activeTab === 'notes') {
+        var m = topmost.textContent.match(/\[Study:\s*(.+?)\s*→/);
+        if (m) {
+          currentStudyName = m[1].trim();
+          jumpBtn.textContent = '→ ' + currentStudyName;
+          jumpBtn.classList.add('visible');
+        }
+      } else if (activeTab !== 'notes') {
+        jumpBtn.classList.remove('visible');
+        currentStudyName = null;
+      }
+    }, { threshold: 0.1 });
+
+    placeholders.forEach(function(p) { observer.observe(p); });
+  }
+
+  jumpBtn.addEventListener('click', function() {
+    if (!currentStudyName) return;
+    var name = currentStudyName;
+    switchTab('studies');
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        var studiesPane = document.getElementById('pane-studies');
+        var headings = Array.from(studiesPane.querySelectorAll('h1,h2,h3'));
+        // Match on author surname (first token before space or comma)
+        var key = name.split(/[\s,]/)[0];
+        var target = headings.find(function(h) { return h.textContent.includes(key); });
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   });
 
-  // =============================================
-  // Search
-  // =============================================
   let searchTimeout;
   document.getElementById('searchInput').addEventListener('input', function(ev) {
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(function() {
       const query = ev.target.value.trim();
-      const cont = document.getElementById('content');
+      const cont = document.getElementById('pane-' + activeTab);
       cont.querySelectorAll('.highlight').forEach(function(mark) {
         const par = mark.parentNode;
         par.replaceChild(document.createTextNode(mark.textContent), mark);
@@ -528,8 +546,8 @@
         const idx = node.textContent.toLowerCase().indexOf(query.toLowerCase());
         if (idx === -1) continue;
         const before = node.textContent.substring(0, idx);
-        const match = node.textContent.substring(idx, idx + query.length);
-        const after = node.textContent.substring(idx + query.length);
+        const match  = node.textContent.substring(idx, idx + query.length);
+        const after  = node.textContent.substring(idx + query.length);
         const span = document.createElement('span');
         span.className = 'highlight';
         span.textContent = match;
@@ -542,6 +560,7 @@
       }
     }, 300);
   });
+
 })();
 </script>
 </body>

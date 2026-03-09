@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIE 9990 - Organisational Psychology Revision</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --card: #0f3460;
+    --accent: #e94560;
+    --accent2: #533483;
+    --text: #eee;
+    --text-muted: #a0a0b8;
+    --green: #00d2a0;
+    --yellow: #ffd166;
+    --blue: #4cc9f0;
+    --orange: #f77f00;
+    --border: #2a2a4a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px;
+    padding-bottom: 80px;
+  }
+  .top-nav {
+    position: sticky; top: 0; z-index: 100; background: var(--surface);
+    border-bottom: 2px solid var(--accent); padding: 10px 16px;
+    display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .top-nav a {
+    flex-shrink: 0; padding: 6px 14px; border-radius: 20px; background: var(--card);
+    color: var(--text); text-decoration: none; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--border); transition: all 0.2s;
+  }
+  .top-nav a:hover, .top-nav a:active { background: var(--accent); border-color: var(--accent); }
+  .content { max-width: 820px; margin: 0 auto; padding: 20px 16px; }
+  h1 {
+    font-size: 1.8rem; color: var(--accent); margin: 48px 0 16px;
+    padding-bottom: 8px; border-bottom: 3px solid var(--accent); line-height: 1.3;
+  }
+  h1:first-child { margin-top: 0; }
+  h2 {
+    font-size: 1.4rem; color: var(--blue); margin: 36px 0 12px; padding: 8px 12px;
+    background: rgba(76, 201, 240, 0.1); border-left: 4px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+  }
+  h3 { font-size: 1.15rem; color: var(--yellow); margin: 24px 0 10px; }
+  h4 { font-size: 1.05rem; color: var(--orange); margin: 20px 0 8px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; }
+  li ul { margin: 4px 0 4px 16px; }
+  strong { color: var(--yellow); }
+  em { color: var(--blue); font-style: italic; }
+  blockquote {
+    background: var(--surface); border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0; padding: 14px 16px; margin: 16px 0; font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  blockquote strong { color: var(--green); }
+  .table-wrap {
+    overflow-x: auto; margin: 14px 0; border-radius: 10px; border: 1px solid var(--border);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 400px; }
+  thead { background: var(--card); }
+  th {
+    padding: 10px 12px; text-align: left; color: var(--blue); font-weight: 700;
+    border-bottom: 2px solid var(--accent); white-space: nowrap;
+  }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+  tr:hover { background: rgba(76, 201, 240, 0.07); }
+  hr { border: none; height: 1px; background: var(--border); margin: 28px 0; }
+  hr + hr { display: none; }
+  .part-header {
+    text-align: center; padding: 32px 16px 20px; margin: 48px -16px 24px;
+    background: linear-gradient(135deg, var(--accent2), var(--card)); border-radius: 12px;
+  }
+  .part-header h1 { border: none; margin: 0; font-size: 1.6rem; }
+  .scroll-top {
+    position: fixed; bottom: 20px; right: 20px; width: 48px; height: 48px;
+    border-radius: 50%; background: var(--accent); color: white; border: none;
+    font-size: 22px; cursor: pointer; display: none; align-items: center;
+    justify-content: center; box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4); z-index: 99;
+  }
+  .scroll-top.visible { display: flex; }
+  .progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px; background: var(--accent);
+    z-index: 200; transition: width 0.1s;
+  }
+  .search-bar {
+    position: sticky; top: 50px; z-index: 90; padding: 8px 16px; background: var(--bg);
+  }
+  .search-bar input {
+    width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); font-size: 15px; outline: none;
+  }
+  .search-bar input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(233,69,96,0.3); }
+  .search-bar input::placeholder { color: var(--text-muted); }
+  .highlight { background: var(--accent); color: white; padding: 1px 3px; border-radius: 3px; }
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    h1 { font-size: 1.45rem; } h2 { font-size: 1.2rem; } h3 { font-size: 1.05rem; }
+    table { font-size: 0.82rem; } th, td { padding: 7px 8px; }
+    .content { padding: 14px 12px; } .top-nav { padding: 8px 10px; }
+  }
+  @media (min-width: 768px) {
+    body { font-size: 17px; } .content { padding: 28px 24px; }
+  }
+  @media print {
+    body { background: white; color: black; font-size: 12px; }
+    .top-nav, .search-bar, .scroll-top, .progress-bar { display: none !important; }
+    h1, h2, h3 { color: black; } blockquote { border-color: #333; background: #f5f5f5; }
+    table { min-width: auto; } a { color: black; }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="top-nav">
+  <a href="#part1">1: Motivation</a>
+  <a href="#part2">2: Leadership</a>
+  <a href="#part3">3: Group Behaviour</a>
+  <a href="#part4">4: Culture & Conflict</a>
+</nav>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search notes... (e.g. Maslow, groupthink, Earley)">
+</div>
+
+<div class="content" id="content">
+  <p style="color: var(--text-muted); text-align: center; padding: 40px 0;">Loading notes...</p>
+</div>
+
+<button class="scroll-top" id="scrollTop">&#8593;</button>
+
+<script>
+(async function() {
+  // Load the markdown file
+  let md;
+  try {
+    const resp = await fetch('COMPLETE_REVISION_NOTES.md');
+    md = await resp.text();
+  } catch(e) {
+    document.getElementById('content').textContent = 'Could not load COMPLETE_REVISION_NOTES.md. Make sure this HTML file is in the same folder.';
+    return;
+  }
+
+  // Inject anchor IDs for parts
+  md = md.replace(/# PART 1: MOTIVATION AT WORK \(Pages 638-657\)/,
+    '<div id="part1" class="part-header"><h1>PART 1: MOTIVATION AT WORK</h1></div>\n');
+  md = md.replace(/# PART 2: LEADERSHIP & MANAGEMENT \(Pages 658-677\)/,
+    '<div id="part2" class="part-header"><h1>PART 2: LEADERSHIP & MANAGEMENT</h1></div>\n');
+  md = md.replace(/# PART 3: GROUP BEHAVIOUR & PERFORMANCE \(Pages 678-697\)/,
+    '<div id="part3" class="part-header"><h1>PART 3: GROUP BEHAVIOUR & PERFORMANCE</h1></div>\n');
+  md = md.replace(/# PART 4: GROUP PERFORMANCE ACROSS CULTURES & CONFLICT \(Pages 698-716\)/,
+    '<div id="part4" class="part-header"><h1>PART 4: CULTURE, EPM & CONFLICT</h1></div>\n');
+
+  // Configure marked
+  marked.setOptions({ breaks: true, gfm: true });
+
+  // Custom renderer to wrap tables
+  const renderer = new marked.Renderer();
+  const origTable = renderer.table;
+  renderer.table = function(header, body) {
+    const table = origTable.call(this, header, body);
+    return '<div class="table-wrap">' + table + '</div>';
+  };
+
+  const rawHtml = marked.parse(md, { renderer: renderer });
+  // Sanitize with DOMPurify, allowing our custom classes and IDs
+  const cleanHtml = DOMPurify.sanitize(rawHtml, {
+    ADD_TAGS: ['div'],
+    ADD_ATTR: ['id', 'class']
+  });
+
+  document.getElementById('content').innerHTML = cleanHtml;
+
+  // Progress bar
+  window.addEventListener('scroll', function() {
+    var winScroll = document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('progressBar').style.width = (winScroll / height * 100) + '%';
+    var btn = document.getElementById('scrollTop');
+    if (winScroll > 400) { btn.classList.add('visible'); }
+    else { btn.classList.remove('visible'); }
+  });
+
+  document.getElementById('scrollTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Search with highlight
+  var searchTimeout;
+  document.getElementById('searchInput').addEventListener('input', function(e) {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(function() {
+      var query = e.target.value.trim();
+      var content = document.getElementById('content');
+
+      // Remove old highlights
+      var marks = content.querySelectorAll('.highlight');
+      for (var i = 0; i < marks.length; i++) {
+        var parent = marks[i].parentNode;
+        parent.replaceChild(document.createTextNode(marks[i].textContent), marks[i]);
+        parent.normalize();
+      }
+
+      if (query.length < 2) return;
+
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var textNodes = [];
+      while (walker.nextNode()) {
+        if (walker.currentNode.textContent.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+          textNodes.push(walker.currentNode);
+        }
+      }
+
+      var first = true;
+      for (var j = 0; j < textNodes.length; j++) {
+        var node = textNodes[j];
+        var idx = node.textContent.toLowerCase().indexOf(query.toLowerCase());
+        if (idx === -1) continue;
+        var before = node.textContent.substring(0, idx);
+        var match = node.textContent.substring(idx, idx + query.length);
+        var after = node.textContent.substring(idx + query.length);
+
+        var span = document.createElement('span');
+        span.className = 'highlight';
+        span.textContent = match;
+
+        var parent = node.parentNode;
+        var frag = document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(before));
+        frag.appendChild(span);
+        frag.appendChild(document.createTextNode(after));
+        parent.replaceChild(frag, node);
+
+        if (first) {
+          span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          first = false;
+        }
+      }
+    }, 300);
+  });
+})();
+</script>
+</body>
+</html>
