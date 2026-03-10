@@ -1,1313 +1,418 @@
-# Key Studies — CIE 9990 Psychology
-
-Extracted from `TEST_chunk3_schizophrenia_criteria.md` via 10 parallel agents.
-
-<!-- chunk 1: no studies -->
+# Studies: Schizophrenia Criteria
 
 ---
 
-# Freeman et al. (2003) — Virtual Reality & Persecutory Ideation
+## Aneja et al. (2018)
+
+> **One-liner:** A 14-year-old Indian boy with a troubled childhood developed schizophrenia — this case shows exactly how ICD-11 criteria map onto real symptoms in a young person.
 
 ---
 
-### One-line summary
+### 1. Why This Study Exists
 
-Neutral **avatars in virtual reality** triggered **persecutory thoughts** in some healthy participants, especially those with higher **paranoia and anxiety**.
+- Schizophrenia in children under 18 (**Early Onset**) and especially under 13 (**Very Early Onset / VEOS**) is rare and poorly understood
+- Most research focuses on adults — diagnosing children is hard, clinicians often miss it or misdiagnose it
+- The researchers wanted to **document a real case of VEOS** to show what it actually looks like — and how to apply ICD-11 to young patients
 
----
-
-## Aim
-
-| Aim |
-| --- |
-| Test whether **neutral avatars in VR** provoke **persecutory ideation** |
-| Examine whether this is stronger in people with **paranoia and emotional distress** |
+> 💡 **Why a case study?** VEOS is so rare you cannot recruit a large sample. One detailed case gives richer, more clinically useful information than a number on a spreadsheet.
 
 ---
 
-## Method Overview
+### 2. The Procedure — Told as a Story
 
-| Feature | Details |
-| ------- | ------- |
-| Method  | **Correlational study** |
-| Data    | Quantitative questionnaires + qualitative interviews |
+Think of this like a detective investigation that lasted weeks. The psychiatrists were piecing together what was wrong with the boy.
 
----
+**The patient:**
+- **14-year-old boy** from India (urban, middle-class family)
+- Only completed class 6 (~age 12 education level)
+- Difficult home: father was aggressive, parents **divorced when he was 10**
+- After divorce → went to live with his **grandparents**
 
-## Sample
+**Step 1 — Referral**
 
-| Participants | Details |
-| ------------ | ------- |
-| N            | **24 volunteers** |
-| Gender       | **12 male, 12 female** |
-| Mean age     | **26** |
-| Recruitment  | University College London |
-| Occupation   | **21 students, 3 staff** |
+Brought to **outpatient psychiatry clinic at AIIMS** (All India Institute of Medical Sciences), Jodhpur by family — his behaviour had become unmanageable. Mother gave **proxy consent** (boy too disturbed to consent himself).
 
----
+**Step 2 — History-taking (the detective work)**
 
-## Procedure
+| Timeline | What was happening |
+|---|---|
+| Age ~11 (3 yrs before clinic) | **Academic decline** — grades drop, stops engaging with school |
+| Age ~12 (2 yrs before clinic) | **Starts hearing voices** — teasing, mocking voices |
+| Ongoing | **Suspicious of his mother**, social withdrawal, poor self-care |
+| Near referral | **Muttering/laughing at unseen people**, shouting at nobody, aggression |
 
-| Step          | Description |
-| ------------- | ----------- |
-| Training      | Participants trained in VR equipment |
-| Pre-measures  | Half completed **BSI, anxiety questionnaire, paranoia scale** |
-| VR task       | Explored **virtual library with 5 avatars** |
-| Instructions  | Form impressions of people |
-| Post-measures | Questionnaires repeated |
-| Interview     | Experiences discussed |
-| Rating        | Psychologist rated persecutory ideation (0–6) |
+**Step 3 — Clinical observation**
 
----
+Psychiatrists directly observed:
+- Talking and laughing at things nobody else could see
+- **Blunted affect** (flat, emotionless expression)
+- **Poor insight** — did not believe he was unwell
+- Aggressive, violent outbursts
+- Poor sleep, neglected hygiene
 
-### VR-Paranoia Questionnaire
+**Step 4 — Diagnosis**
 
-Measured:
+Used **ICD-11 criteria** → checked each criterion against observed symptoms → confirmed schizophrenia.
 
-| Category                 | Items       |
-| ------------------------ | ----------- |
-| **Persecutory thoughts** | Items 1–5   |
-| **Ideas of reference**   | Items 6–10  |
-| **Positive beliefs**     | Items 11–15 |
+**Step 5 — Treatment**
 
-Example items:
+- First tried **sodium valproate** (normally for bipolar) → mood improved but psychotic symptoms worsened
+- Switched to **olanzapine** (up to 25mg/day) then **risperidone**
+- Required **hospitalisation** due to severe aggression
 
-- "They were hostile towards me."
-- "They were talking about me behind my back."
-- "They were friendly towards me."
+> 💡 **Analogy:** The psychiatrists were like detectives with a crime-scene checklist (ICD-11). They interviewed witnesses (family), observed the suspect (the boy), reviewed the history, and matched the evidence to the checklist to reach a verdict (diagnosis).
 
 ---
 
-## Results
+### 3. What They Found
 
-| Finding              | Explanation |
-| -------------------- | ----------- |
-| Mean paranoia score  | **31.8** |
-| Gender difference    | None |
-| Correlation          | Persecutory thoughts ↔ ideas of reference |
-| Correlation          | Persecutory thoughts ↔ anxiety, interpersonal sensitivity |
-| Qualitative comments | Participants described avatars as friendly or threatening |
+**Positive symptoms** (something added to experience):
 
----
+| Symptom | What it looked like |
+|---|---|
+| Auditory hallucinations | Heard teasing/mocking voices for 2+ years |
+| Delusions | Believed his mother was doing something harmful |
+| Disorganised behaviour | Muttered, laughed, shouted at unseen people |
 
-## Conclusion
+**Negative symptoms** (something taken away from normal functioning):
 
-VR environments can **trigger persecutory ideation**, especially in individuals with **higher anxiety or paranoia**.
+| Symptom | What it looked like |
+|---|---|
+| Social withdrawal | Stopped school, isolated himself |
+| Blunted affect | Flat, emotionless face |
+| Avolition | Loss of motivation, neglected hygiene |
+| Alogia | Spoke very little |
 
-VR may help develop **new treatments for psychosis**.
+**ICD-11 criteria matched:**
 
----
+| ICD-11 Criterion | Present? |
+|---|---|
+| Persistent hallucinations | ✅ Voices for 2 years |
+| Persistent delusions | ✅ Suspicion of mother |
+| Disorganised behaviour | ✅ Muttering, shouting at nobody |
+| Negative symptoms | ✅ Multiple |
+| Psychomotor disturbance | ✅ Agitation and aggression |
 
-## Evaluation
-
-| Strength                              | Weakness |
-| ------------------------------------- | -------- |
-| Mixed methods → higher **validity**   | Low **presence** score (2.3/6) |
-| Controlled VR environment             | Short exposure (5 minutes) |
-| Checked questionnaire priming effect  | **Sampling bias** (young university sample) |
-| Useful for therapy development        | Limited **generalisability** |
-
----
-
-## Ethics
-
-| Issue         | Explanation |
-| ------------- | ----------- |
-| Consent       | Given but not fully informed |
-| Harm          | Anxiety unchanged after VR |
-| Justification | Potential societal benefits |
+**Notable findings:**
+- **Insidious onset** — symptoms crept in over years, not suddenly
+- **Premorbid difficulties** long before psychosis (family stress age 10, academic decline age 11, hallucinations age 12)
+- Initial misdiagnosis with sodium valproate shows the picture was initially unclear
+- **No insight** into illness made treatment harder
 
 ---
 
-## Issues & Debates
+### 4. Why It Matters
 
-| Debate                        | Explanation |
-| ----------------------------- | ----------- |
-| **Idiographic vs nomothetic** | Interviews vs statistical questionnaires |
-| **Individual vs situational** | Personality traits vs VR environment |
+- VEOS is rare (~1 in 10,000 children) — documented cases help psychiatrists recognise it earlier
+- Proves **ICD-11 criteria work for children**, not just adults
+- Insidious onset means early signs get mistaken for normal teenage behaviour or depression
+- **Early diagnosis = better outcomes** for cognitive and social development
 
-Links to **Research Methods (correlational studies)** and **Issues & Debates**.
-
----
-
-## Trait vs State Paranoia
-
-| Trait                                | State |
-| ------------------------------------ | ----- |
-| Stable personality tendency          | Situation-specific reaction |
-| Measured by **BSI + Paranoia Scale** | Measured by **VR-Paranoia questionnaire** |
-
-Memory hook:
-- Trait = **personality thermostat**
-- State = **temperature right now**
+> 🔗 **Real-world link:** If a teacher notices a child withdrawing, hearing things, and declining academically — this case shows schizophrenia must be on the list. Early referral can change everything.
 
 ---
 
-## Exam Skeleton (10-mark evaluation)
+### 5. Strengths ✅ and Weaknesses ❌
 
-1. Describe **aim and VR method**
-2. Explain **sample and procedure**
-3. Report **key results**
-4. Strength: mixed methods
-5. Weakness: low ecological validity
-6. Weakness: sampling bias
-7. Link to **individual vs situational explanations**
+| | Point | Explanation + Consequence |
+|---|---|---|
+| ✅ | Rich, detailed idiographic data | Deep info gives clinicians a realistic picture of what VEOS actually looks like in practice |
+| ✅ | Demonstrates ICD-11 applicability in children | Proves criteria work for a 14-year-old → valid diagnostic practice for young patients |
+| ✅ | Real-world clinical setting | Genuine hospital case → high **ecological validity**; observed behaviour was authentic |
+| ❌ | Only one participant (N=1) | Cannot know if this boy's experience represents VEOS generally. Like judging all pizza from one slice — **cannot generalise** |
+| ❌ | Retrospective history | Family recalled timelines from memory → memory is fallible → timelines may be inaccurate → reduces **reliability** |
+| ❌ | No standardised psychometric tools | No validated scales (e.g., PANSS) reported → hard to compare systematically with other cases |
+| ❌ | Proxy consent only | Boy too disturbed to consent; mother consented on his behalf → raises questions about whether his rights were fully protected |
+| ❌ | Cannot establish cause | Describes what happened, not why. Genetics? Trauma? Neurodevelopment? Case studies cannot establish causation. |
 
----
-
-## Additional Studies (Schizophrenia Treatment)
-
-## Study: Zhao et al. (2016)
-
-**One-liner:** A meta-analysis showed most antipsychotics reduce relapse rates compared to placebo.
-
-| Feature           | Details                                                 |
-| ----------------- | ------------------------------------------------------- |
-| **Aim**           | Assess effectiveness of antipsychotics                  |
-| **Sample**        | Data from 10,000+ patients                              |
-| **Method**        | Meta-analysis of 56 RCTs                                |
-| **Drugs studied** | 18 antipsychotics                                       |
-| **Results**       | 17 drugs reduced relapse vs placebo                     |
-| **Conclusion**    | Antipsychotics effective alternative to hospitalisation |
-
-**However:** 4 drugs showed no improvement vs placebo.
-
-**Strengths & Weaknesses:**
-
-| ✅ Strength                                | ❌ Weakness                                |
-| ------------------------------------------ | ----------------------------------------- |
-| Very large sample                          | Some drugs ineffective                    |
-| Used randomised control trials             | Variability in relapse measurement        |
-| Nomothetic approach allows generalisation  | May ignore individual patient differences |
+> 💡 **Proxy consent explained:** Imagine being put on medication and written about in a medical journal, but being too unwell to understand what's happening. Your parent says yes on your behalf. That's ethically complex — their judgement might not reflect your wishes, and you couldn't withdraw consent even if you wanted to.
 
 ---
 
-## Study: Petrides et al. (2015)
+### 6. Exam Tips
 
-**One-liner:** Combining ECT with clozapine reduced symptoms significantly in treatment-resistant patients.
+> ⚡ **Examiners want:**
+> - Specific symptoms named and linked to ICD-11 criteria by name
+> - You understand "idiographic" and can apply it
+> - WHY proxy consent is an ethical issue (not just that it was used)
+> - Connection of findings to real-world clinical use
 
-| Feature    | Details                                    |
-| ---------- | ------------------------------------------ |
-| Aim        | Test ECT + clozapine effectiveness         |
-| Sample     | 39 patients                                |
-| Method     | Single-blind study                         |
-| Results    | 50% showed ≥40% symptom reduction in 8 weeks |
-| Conclusion | ECT may help treatment-resistant patients  |
+> 🧠 **Quick recall:**
+> - Patient's age + country? → 14, India
+> - How long academic decline? → 3 years
+> - How long hearing voices? → 2 years
+> - First drug + why it was wrong? → Sodium valproate (mood stabiliser, not antipsychotic)
+> - Name 2 positive + 2 negative symptoms
+> - Who gave consent and why is that an issue?
 
-**Strengths & Weaknesses:**
+#### 📋 Skeleton: "Describe Aneja et al. (2018)" [6 marks]
 
-| ✅ Strength                    | ❌ Weakness                                    |
-| ------------------------------ | ------------------------------------------------ |
-| Rapid improvement for severe cases | Small sample                                     |
-| Could prevent suicide risk     | Participants knew treatment → expectancy effects |
-| Useful when drugs fail         | Possible placebo effect                        |
+1. **Aim:** Document a case of VEOS in a child and apply ICD-11 diagnostic criteria
+2. **Participant:** 14-year-old boy in India; parents divorced at age 10; living with grandparents
+3. **Procedure:** Brought to outpatient psychiatry clinic (AIIMS, Jodhpur); detailed history gathered from family (proxy consent from mother); behaviour directly observed; symptoms assessed against ICD-11
+4. **Symptoms:** Auditory hallucinations (mocking voices, 2 years), delusions (suspicion of mother), social withdrawal, blunted affect, poor self-care, muttering/laughing at unseen people, aggression, lack of insight
+5. **Findings:** Symptoms met multiple ICD-11 criteria → VEOS diagnosis confirmed
+6. **Conclusion:** ICD-11 criteria can be validly applied to children; early assessment is critical when prodromal signs appear
 
----
-
-## Study: Melzer-Ribeiro et al. (2017)
-
-**Placebo Evidence for ECT:**
-
-| Group    | Sample |
-| -------- | ------ |
-| Fake ECT | n = 10 |
-| Real ECT | n = 13 |
-
-**Result:** No significant difference
-
-**Note:** Suggests improvement may be due to expectancy effects.
+> 📝 Avoid vague phrases like "data was collected" — say exactly what was done and found.
 
 ---
 
-## Study: Wang et al. (2018a)
 
-**Cultural Differences:**
+## Freeman et al. (2003) — Deep Explanation for CIE 9990
 
-| Feature  | Details                      |
-| -------- | ---------------------------- |
-| Method   | Meta-analysis of 18 RCTs     |
-| Location | 17 studies in China          |
-| Result   | ECT + clozapine effective    |
-
-**Note:** China = high power-distance culture. Patients may trust doctors more → stronger placebo effects.
-
-**Issue:** Results from China may not generalise to Western cultures.
+> **One-line memory hook:** Neutral virtual strangers triggered real paranoid thoughts — even in healthy people — especially if they were already anxious or interpersonally sensitive.
 
 ---
 
-## Study: Reed et al. (2018)
+### 1. Why This Study Exists — The "So What?"
 
-**ICD-11 Diagnostic Criteria Reliability Study:**
+**What was Freeman trying to understand?**
 
-| Disorder             | Agreement |
-| -------------------- | --------- |
-| Bipolar I            | 84%       |
-| Bipolar II           | 62%       |
-| Recurrent depression | 74%       |
-| Dysthymia            | 45%       |
+- **Persecutory ideation** = paranoid thoughts that others are out to get you, watching you, judging you negatively
+- This is a core symptom of **schizophrenia** — but does it only exist in people with the disorder?
+- Freeman suspected it exists on a **spectrum** — meaning healthy people can experience mild versions of the same thoughts
+- The big question: **what psychological factors push someone towards paranoid thinking?**
 
-**Context:** Study across 13 countries examining inter-rater reliability of ICD-11 diagnostic criteria for mood disorders.
+**Why use VR instead of real life?**
 
----
+| Problem with real life | How VR solves it |
+| ---------------------- | ---------------- |
+| You cannot control what real people do | Avatars are **programmed to be neutral** — same for everyone |
+| Real strangers have expressions, reactions | Avatars have **no threatening cues** — any paranoia is coming from inside the participant |
+| Ethical problems putting people in genuinely threatening situations | VR = **safe, controllable, repeatable** |
+| Cannot standardise the social stimulus | Every participant sees the **exact same environment** |
 
-# Moreno et al. (1999) — Tryptophan Depletion & Serotonin
+💡 **The logic is brilliant:** if you strip out ALL threatening signals and someone STILL gets paranoid — the paranoia is coming from THEM, not the situation. That tells us something huge about the internal psychological processes that drive paranoid thinking.
 
-## Key Study: Moreno et al. (1999)
+**What's the link to schizophrenia?**
 
-Reducing **tryptophan** increased depressive symptoms.
-
-| Aim     | test serotonin role           |
-| ------- | ----------------------------- |
-| Method  | tryptophan-depletion drink    |
-| Measure | Hamilton Depression Scale     |
-| Result  | depressive symptoms increased |
-
----
-
-# Oruč et al. (1997) — Serotonin Genes & Bipolar Risk
-
-Tested whether **serotonin genes increase bipolar risk**.
-
-### Study Overview
-
-| Aim      | test if **5-HT2C** and **5-HTT** polymorphisms linked to bipolar |
-| -------- | ---------------------------------------------------------------- |
-| Sample   | 25 females + 17 males bipolar                                    |
-| Controls | 25 females + 15 males                                            |
-| Method   | DNA from blood samples                                           |
-| Design   | correlation (association analysis)                               |
-
-### Procedure
-
-Genes analysed:
-
-| Gene        | Alleles           |
-| ----------- | ----------------- |
-| **5-HTR2C** | Cys (C) / Ser (S) |
-| **5-HTT**   | 1 / 2             |
-
-### Results
-
-| Finding                                     |
-| ------------------------------------------- |
-| No major differences in gene polymorphisms  |
-| **S allele** more common in bipolar females |
-| **5-HTT allele 1** slightly more common     |
-
-### Conclusion
-
-These genes **do not play a major role**, but **women may be more vulnerable to serotonin genetic changes**.
-
-### Evaluation
-
-| Strength                    | Weakness                 |
-| --------------------------- | ------------------------ |
-| Careful clinical diagnosis  | Small sample             |
-| Replicated previous studies | limited allele diversity |
-| scientific genetic analysis | may miss real effects    |
-
-### Ethics
-
-Important issues:
-
-* **informed consent**
-* **confidentiality**
-* potential anxiety about genetic risk
-
-### Application
-
-Understanding genetics could lead to:
-
-| Future Treatment        |
-| ----------------------- |
-| **pharmacogenomics**    |
-| personalised medication |
+- Schizophrenia involves **positive symptoms** like delusions (including persecutory delusions)
+- Freeman wanted to test whether paranoia is a **continuum** — not a category that only "ill people" have
+- If healthy people show the same paranoid processing, it supports the idea that schizophrenia symptoms are an **extreme version of normal cognition**
+- This has huge implications: it means we can study paranoia without needing clinical populations — and potentially catch it early
 
 ---
 
-# Grant et al. (2008) — Opiate Antagonists for Gambling Disorder
+### 2. The Procedure — Explained as a Story
 
-## Key Study: Grant et al. (2008) – Treating Gambling Disorder with Drugs vs Placebo
-
-### Why this matters
-
-> Gambling disorder can destroy lives — understanding **who responds to medication** helps clinicians choose the best treatment.
+**Imagine you are the participant. Here is what happens:**
 
 ---
 
-## TLDR
+**Step 1 — You arrive at the lab**
 
-> * **Opiate antagonists** (e.g. **nalmefene**, **naltrexone**) block **opioid receptors**
-> * This prevents **dopamine-driven euphoria** from gambling
-> * **Family history of alcoholism** predicted the **best treatment response**
-> * **Strong gambling urges** slightly predicted better response to higher doses
-> * **Younger participants** showed stronger **placebo effects**
+- You sign up thinking it is a study about "forming impressions of people"
+- You are NOT told it is about paranoia — this is deliberate
+- Why? If you knew, you might either **suppress** paranoid thoughts ("I shouldn't think this") or **fake** them — either way, results would be useless
+- This is a form of **partial deception** — participants gave consent but not fully **informed** consent
 
----
-
-## Biological mechanism behind the treatment
-
-| Step | What happens                                                             |
-| ---- | ------------------------------------------------------------------------ |
-| 1    | **Opiates** bind to **opioid receptors** in the nervous system           |
-| 2    | This **inhibits GABA release**                                           |
-| 3    | Reduced GABA → **dopamine activity increases**                           |
-| 4    | Dopamine increase → **euphoria / reward feeling**                        |
-| 5    | **Opiate antagonists** occupy receptors but **do NOT activate them**     |
-| 6    | Result → **reduced dopamine reward → gambling becomes less reinforcing** |
-
-Memory hook:
-
-> Imagine a **casino jackpot machine wired to your brain**.
-> Normally → dopamine fireworks
-> **Opiate antagonists unplug the jackpot machine.**
+🧠 **Recall check:** Why didn't Freeman tell participants the study was about paranoia?
 
 ---
 
-### Quick check
+**Step 2 — You fill in questionnaires (BEFORE VR)**
 
-> Why would blocking opioid receptors reduce gambling behaviour?
+These measure your **baseline** — who you already are before anything happens:
 
----
+| Questionnaire | What it measures | Why NOW (before VR) |
+| ------------- | ---------------- | ------------------- |
+| **BSI (Brief Symptom Inventory)** | 53-item measure of psychological distress — including **interpersonal sensitivity** (feeling easily hurt or judged) and anxiety | Captures your **trait** levels before VR could influence you |
+| **Paranoia Scale** | General tendency towards paranoid thinking in everyday life | Another **trait** measure — your baseline suspiciousness |
+| **State Anxiety Questionnaire** | How anxious you feel RIGHT NOW | Baseline anxiety at this moment |
 
-## Study Breakdown
-
-## One-liner
-
-> **Grant et al. (2008):** People with a **family history of alcoholism** responded best to **opiate antagonist treatment for gambling disorder**.
-
----
-
-## Aim
-
-| Aim                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------- |
-| Investigate **factors predicting effectiveness** of **opiate antagonist drugs** in treating gambling disorder |
+> **Key point:** Only HALF the participants filled these in before VR. The other half filled them in AFTER. This was done to check that filling in the questionnaires didn't **prime** participants to think paranoid thoughts inside the VR. (It didn't — both halves showed similar patterns.)
 
 ---
 
-## Hypotheses
+**Step 3 — You put on the VR headset**
 
-| Hypothesis                                                                                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Opiate antagonists would be **more effective** for people with **family history of alcoholism**, **strong gambling urges**, and **strong euphoria response to alcohol** |
-| People with **weaker urges** might show **placebo effects**                                                                                                             |
+- You enter a **virtual social space** (designed to resemble a mundane public environment)
+- The scene is deliberately **unthreatening**
 
----
+Picture this:
 
-## Method
+> You are standing in a virtual space. The lighting is normal. There is no dramatic music. No one is glaring at you.
 
-| Feature         | Details                                                                                               |
-| --------------- | ----------------------------------------------------------------------------------------------------- |
-| Method          | **Meta-analysis** combining **two RCTs**                                                              |
-| Design          | **Double-blind placebo-controlled experiment**                                                        |
-| Design type     | **Independent measures**                                                                              |
-| Data collection | **Structured interviews**, **semi-structured interviews**, **questionnaires**, **psychometric tests** |
+**The avatars — what do they look like?**
 
----
-
-## Sample
-
-| Feature            | Details                                                                 |
-| ------------------ | ----------------------------------------------------------------------- |
-| Participants       | **284 American adults**                                                 |
-| Diagnosis          | **DSM-IV pathological gambling**                                        |
-| Screening          | **SOGS >= 5**                                                           |
-| Gender             | **48% female**                                                          |
-| Gambling behaviour | Gambled in last **2 weeks** and **>1x per week**                        |
-| Previous drug use  | None had used **nalmefene or naltrexone**                               |
-| Trial groups       | **207** nalmefene trial (16 weeks) / **77** naltrexone trial (18 weeks) |
-| Recruitment        | **15 psychiatric centres**                                              |
-| Age range          | **19–72 years**                                                         |
+- **6 computer-generated human figures** present in the space
+- They are designed to be **ambiguous** — not smiling warmly, not scowling
+- They occasionally **glance around** — the kind of idle movement real people make — but do NOT look directly or threateningly at you
+- They do **not speak**, do not approach you, do not react to you
+- They are, in every measurable sense, **completely neutral**
 
 ---
 
-## Procedure
+**Step 4 — You spend time in the VR environment**
 
-### Drug allocation
-
-Participants randomly assigned to:
-
-| Group      | Dose                        |
-| ---------- | --------------------------- |
-| Placebo    | No active drug              |
-| Nalmefene  | **25 mg / 50 mg / 100 mg**  |
-| Naltrexone | **50 mg / 100 mg / 150 mg** |
+- Duration: approximately **2 minutes** inside the virtual environment
+- Your task (as told to you): "Form an impression of what the people in there think about you"
+- Note: this instruction itself subtly directs your attention toward the avatars' attitudes — which is what the researchers want to measure
 
 ---
 
-### Measurements
+**Step 5 — You come out and fill in the VR-Paranoia Questionnaire**
 
-| Variable                   | Method                                                      |
-| -------------------------- | ----------------------------------------------------------- |
-| Gambling severity          | **Modified Yale-Brown Obsessive Compulsive Scale (Y-BOCS)** |
-| Treatment success          | **>35% reduction in symptoms**                              |
-| Comorbid disorders         | Structured interview                                        |
-| Family psychiatric history | Semi-structured interview                                   |
-| Depression/anxiety         | Questionnaires                                              |
+This was a brand-new questionnaire designed specifically for this study:
 
----
+| Section | Questions | What it asks |
+| ------- | --------- | ------------ |
+| **VR-Persecution** | Items 1–5 | "They were hostile towards me" / "They were trying to upset me" |
+| **VR-Reference** | Items 6–10 | "They were talking about me" / "They were staring at me" |
+| **VR-Positive** | Items 11–15 | "They were friendly towards me" / "They seemed interested in me" |
 
-## Results
-
-### Demographics
-
-| Finding                       | Details                                      |
-| ----------------------------- | -------------------------------------------- |
-| Average gambling onset        | **29 years old**                             |
-| Delay before diagnosis        | **11 years average**                         |
-| Gamblers Anonymous attendance | **30%**                                      |
-| Previous professional help    | **19%**                                      |
-| Game type                     | 48% non-strategic / 16% strategic / 36% both |
-| Mood disorders                | **24%**                                      |
-| Anxiety disorders             | **7%**                                       |
-| Eating disorders              | **3%**                                       |
-| Tobacco use                   | **42%**                                      |
+💡 This measures your **state** response — your reaction to THESE specific avatars, RIGHT NOW. Contrast this with the BSI/Paranoia Scale which measured your general tendencies.
 
 ---
 
-### Drug effectiveness
+**Step 6 — You do a semi-structured interview**
 
-| Predictor                        | Result                                                        |
-| -------------------------------- | ------------------------------------------------------------- |
-| **Family history of alcoholism** | **Strong predictor of positive response**                     |
-| **Strong gambling urges**        | Mildly associated with response to **higher doses**           |
-| **Age**                          | Younger participants more likely to show **placebo response** |
-
-Key exam point:
-
-> **Family history of alcoholism = strongest predictor of treatment success**
+- A researcher asks you open questions about your experience
+- "How did the people in the virtual environment make you feel?"
+- "Did you have any thoughts about what they were thinking?"
+- This produces **qualitative data** — rich, personal accounts in your own words
+- Some people said: "They seemed friendly." Others said: "I felt like they were judging me."
 
 ---
 
-## Conclusion
+### 3. What They Found — Plain English
 
-| Key conclusion                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------ |
-| **Family history of alcoholism** predicts better response to **opiate antagonist treatment** for gambling disorder |
+**Sample:** 24 participants (12 male, 12 female), mostly university students and staff at UCL, no clinical diagnoses
 
----
+**Key results:**
 
-## Evaluation
+- **Most participants held POSITIVE beliefs** about the neutral avatars — this was the most common response
+- BUT — a **meaningful minority** endorsed **persecutory thoughts** and **ideas of reference** (thinking the avatars were talking about or staring at them)
+- The mean score on the pre-existing Paranoia Scale was **31.8** (SD = 10.8, range 20–61) — indicating real variation in baseline paranoia across the sample
 
-| Strength                                                      | Weakness                                           |
-| ------------------------------------------------------------- | -------------------------------------------------- |
-| **Double-blind placebo design** increases validity            | **Self-reported family history** may be inaccurate |
-| **Large multi-centre sample** increases representativeness    | **Semi-structured interviews reduce replicability** |
-| Wide **age range and demographics** increase generalisability | **No long-term follow-up**                         |
-| Blinding reduces **researcher expectancy effects**            | Naltrexone group mostly **Caucasian from Minnesota** |
+**What PREDICTED who got paranoid thoughts?**
 
----
+| Predictor | Relationship to paranoid thoughts |
+| --------- | --------------------------------- |
+| **Interpersonal sensitivity** (BSI subscale) | **Strong positive correlation** — the more sensitive to feeling judged, the more paranoid thoughts |
+| **Anxiety** (state + trait) | **Strong positive correlation** — more anxious = more paranoid in VR |
+| **Trait paranoia** (Paranoia Scale) | Positive correlation — already-paranoid people showed more VR paranoia |
+| **Sense of presence** in VR | Higher immersion = more paranoid thoughts (the more "real" it felt, the stronger the effect) |
 
-### Ethics
+**Why does it matter that HEALTHY people got paranoid thoughts?**
 
-| Ethical safeguard | Example                                     |
-| ----------------- | ------------------------------------------- |
-| Ethical approval  | Institutional review board                  |
-| Informed consent  | Participants informed of risks              |
-| Screening         | Excluded high-risk participants             |
-| Placebo ratio     | **1:3 placebo vs treatment** to reduce harm |
+- It challenges the idea that paranoia is a **binary** thing — either you have it (clinical) or you don't (normal)
+- Instead it suggests paranoia is **dimensional** — everyone sits somewhere on a spectrum
+- This supports the **continuum model of psychosis** — schizophrenia is not categorically different from normal experience, it is an extreme version of processes we all have
+- It also means we can study paranoia **without needing clinical participants** — which is more ethical and more practical
 
 ---
 
-## Issues & Debates
+### 4. Trait vs State Paranoia — The Trickiest Part
 
-### Reductionism vs Holism
+This distinction is what examiners LOVE to test. Here it is made simple.
 
-| Reductionist                           | Holistic                                                 |
-| -------------------------------------- | -------------------------------------------------------- |
-| Focus on **neurochemistry (dopamine)** | Behaviour also influenced by **beliefs & coping skills** |
-| Medication removes reward              | Psychological causes may remain                          |
+**The party analogy:**
 
----
-
-### Idiographic vs Nomothetic
-
-| Nomothetic                        | Idiographic                              |
-| --------------------------------- | ---------------------------------------- |
-| Large sample statistical analysis | Individual treatment experiences ignored |
-
----
-
-### Application to everyday life
-
-> Doctors can ask **simple questions about family history** to predict treatment success.
-
----
-
-## Exam tip
-
-> For **10-mark evaluations**, link the study to **issues & debates** such as:
+> Imagine you are going to a party.
 >
-> * **Reductionism**
-> * **Nomothetic approach**
-> * **Application to treatment**
+> **Trait** = how nervous you generally are at parties. This is stable. It is part of who you are.
+>
+> **State** = how nervous you felt at THIS specific party, tonight, with THESE specific people. It can go up or down depending on the situation.
+
+Now apply this to the study:
+
+| | Trait Paranoia | State Paranoia |
+| --- | --- | --- |
+| **What it is** | Your general, stable tendency to be suspicious of others | Your paranoid reaction to THESE specific avatars, in THIS specific VR session |
+| **When measured** | BEFORE entering VR | AFTER leaving VR |
+| **Tools used** | BSI + Paranoia Scale | VR-Paranoia Questionnaire (items 1–15) |
+| **What it tells us** | Who you ARE as a person | How you REACTED to the situation |
+| **Analogy** | Your general anxiety level at parties | How anxious you felt at last Saturday's party |
+
+💡 **The key finding:** Trait paranoia predicted state paranoia. People who are generally more suspicious in life were MORE likely to have paranoid reactions to the neutral avatars.
+
+⚡ **Exam must-know:** The questionnaires measuring TRAIT were given BEFORE VR so they could not be contaminated by the VR experience. The questionnaire measuring STATE was given AFTER VR because it needed to capture the VR-specific reaction.
 
 ---
 
-## 10-mark exam answer skeleton
+### 5. Why It Matters
 
-**Evaluate Grant et al. (2008)**
-
-1. Strength: **double-blind design → high internal validity**
-2. Strength: **large multi-centre sample → generalisability**
-3. Weakness: **self-report family history → validity issue**
-4. Weakness: **no long-term follow-up → relapse unknown**
-5. Application: **helps clinicians choose effective medication**
+- Supports the idea that **persecutory delusions** in schizophrenia may develop from the same cognitive processes everyone has — just amplified
+- **Anxiety** and **interpersonal sensitivity** are key risk factors — matches cognitive models of psychosis
+- VR provides a **safe, controllable environment** to expose patients to social situations they fear — a virtual form of **graded exposure therapy**
+- Freeman's own later work developed VR therapy for paranoia — a direct descendant of this study
 
 ---
 
-# Mas et al. (2010) — Spanish Blood Phobia Measure (BIPI)
+### 6. Strengths and Weaknesses
 
-## One-liner
+**Strengths**
 
-Developed a **valid and reliable Spanish-language measure of blood phobia (BIPI).**
+| Strength | Why it matters | Consequence |
+| -------- | -------------- | ----------- |
+| **Controlled VR environment** | Every participant saw the SAME neutral avatars — standardised stimulus | High **internal validity** — any paranoid thoughts reflect internal psychological processes, not real threatening cues |
+| **Mixed methods** | Questionnaires (quantitative) + interviews (qualitative) | **Triangulation** — both data types pointing the same way increases confidence |
+| **Checked for questionnaire priming** | Half did questionnaires before VR, half after — results similar | Confirms pre-VR questionnaires didn't contaminate responses — increases **methodological rigour** |
+| **Nomothetic approach** | Statistical correlations identify general patterns | Findings can potentially be applied to understanding paranoia in the wider population |
 
----
+**Weaknesses**
 
-## Study Summary
+| Weakness | Why it matters | Consequence |
+| -------- | -------------- | ----------- |
+| **Partial deception** | Participants not told it was about paranoia | Raises ethical issues — participants couldn't fully consent to having their paranoid tendencies probed |
+| **Small, biased sample** | Only 24 UCL students/staff | **Cannot generalise** — student samples are younger, more educated, less representative |
+| **Low ecological validity of 2003 VR** | Primitive VR — low "presence" score (~2.3 out of 6) | Participants may not have felt fully immersed, reducing realism of emotional responses |
+| **Correlational design** | Anxiety correlating with paranoid thoughts ≠ anxiety CAUSES them | Cannot conclude reducing anxiety would reduce paranoid thoughts |
+| **Short exposure (~2 minutes)** | Real social situations last much longer | Results may not generalise to sustained social interactions |
 
-| Feature         | Description                                                     |
-| --------------- | --------------------------------------------------------------- |
-| **Aim**         | Develop a valid blood-phobia questionnaire for Spanish speakers |
-| **Sample**      | 39 blood-phobia patients + 135 controls                         |
-| **Location**    | Andalusia, Spain                                                |
-| **Average age** | 24                                                              |
+**Ethical considerations:**
 
----
-
-## Method
-
-Participants completed:
-
-* questionnaire of **50 phobia situations**
-* **Likert scale** ratings
-* **Fear Questionnaire (FQ)**
-
-Researchers used **factor analysis** to select the best items.
-
-Final result:
-
-**18 situations selected for BIPI**
+| Issue | Detail |
+| ----- | ------ |
+| **Consent** | Given, but not fully informed — participants didn't know the study was about paranoid thinking |
+| **Potential for harm** | Asking people to focus on whether strangers are judging them COULD increase anxiety — but the study found anxiety was **unchanged** after VR |
+| **Debriefing** | After the study, participants were told the true aim — standard practice after deception |
+| **Justification** | Full informed consent was impossible without destroying validity; potential benefits outweigh the mild deception |
 
 ---
 
-## Results
+### 7. Exam Tips
 
-| Finding                                             |
-| --------------------------------------------------- |
-| Strong correlation with **blood subscale of FQ**    |
-| Phobic participants scored **significantly higher** |
+> **Tricky thing 1 — Why were questionnaires given BEFORE VR?**
+> To measure TRAIT (stable tendencies) without contamination from the VR experience. Use the word "trait" and explain the temporal logic.
 
----
+> **Tricky thing 2 — What is the VR-Paranoia questionnaire measuring?**
+> STATE paranoia — the specific reaction to the specific avatars in the specific session. Not general paranoia.
 
-## Conclusion
+> **Tricky thing 3 — Why does the correlational design limit conclusions?**
+> Correlation does not equal causation. Anxiety and paranoia correlate but we cannot say anxiety CAUSES paranoia from this study alone.
 
-BIPI is a **valid and reliable tool** for diagnosing blood phobia in Spanish speakers.
+> **Tricky thing 4 — Why use VR at all?**
+> Because real people cannot be controlled. VR avatars are standardised — any paranoia is coming from the participant's internal processes, not from real threatening cues.
 
----
-
-## Evaluation
-
-| Strength                                          | Weakness             |
-| ------------------------------------------------- | -------------------- |
-| Strong **statistical analysis (factor analysis)** | Gender imbalance     |
-| Removed weak items to improve test quality        | Female-biased sample |
+> **Tricky thing 5 — What does the study tell us about schizophrenia?**
+> It supports the continuum model — paranoia is not binary. Healthy people show milder versions of the same processes seen in clinical paranoia.
 
 ---
 
-## Gender Bias
+**📋 Skeleton answer — "Describe and evaluate Freeman et al. (2003)" [10 marks]**
 
-| Group  | Number |
-| ------ | ------ |
-| Female | 30     |
-| Male   | 9      |
+**Describe (AO1):**
 
-The phobic sample was heavily female-biased (30 women vs 9 men), which reduces the validity and generalisability of the BIPI for male populations.
+1. **Aim:** To investigate whether neutral VR avatars would trigger persecutory ideation in healthy participants, and which psychological factors predicted this
+2. **Sample:** 24 non-clinical participants (12 male, 12 female), recruited from UCL — students and staff, no clinical diagnoses
+3. **Procedure:** Participants completed pre-VR measures of **trait paranoia (Paranoia Scale), interpersonal sensitivity and anxiety (BSI), and state anxiety** — then entered a virtual environment containing **6 neutral, non-threatening avatars** for approximately 2 minutes — then completed the **VR-Paranoia questionnaire** (15 items: persecution, reference, positive beliefs subscales) and a semi-structured interview
+4. **Results:** Most participants held positive views of the avatars; a minority endorsed persecutory thoughts; higher **anxiety and interpersonal sensitivity** significantly predicted persecutory ideation; trait paranoia also correlated with state paranoid reactions
 
----
+**Evaluate (AO2/AO3):**
 
-# Chapman & DeLapp (2013) — Blood Phobia Case Study
-
-## One-liner
-
-**CBT + Applied Tension successfully treated a man with severe BII phobia.**
-
----
-
-## Study Summary
-
-| Feature     | Details                      |
-| ----------- | ---------------------------- |
-| Method      | **Case study**               |
-| Participant | **T, male, 42**              |
-| Problem     | severe BII phobia + fainting |
-| Duration    | **9 therapy sessions**       |
+5. **Strength — controlled design:** The neutral, standardised VR environment means any paranoid thoughts reflect internal psychological processes, not real threatening cues — high internal validity
+6. **Strength — mixed methods:** Combining questionnaires (quantitative) and interviews (qualitative) provides triangulation
+7. **Weakness — partial deception:** Participants were not told the study was about paranoid thinking — raises ethical concerns about informed consent, though debriefing was provided
+8. **Weakness — sample bias:** Only 24 UCL students/staff — small, educated, specific sample — limits generalisability
+9. **Weakness — correlational design:** Cannot establish that anxiety CAUSES paranoid thinking — direction of causation unclear
+10. **Application:** Findings support the continuum model of psychosis and suggest VR could be used therapeutically — directly informing later VR therapy programmes for paranoia
 
 ---
 
-## Case Background
-
-Key experiences:
-
-* fear of medical settings
-* fainting during blood tests
-* childhood exposure to illness and emergencies
-* family history of anxiety
+> **⚡ One-line summary to memorise:**
+> Freeman et al. (2003) showed that even healthy people develop paranoid thoughts about neutral VR avatars, especially when high in anxiety and interpersonal sensitivity — supporting a continuum model of psychosis.
 
 ---
-
-## Additional Problems
-
-* panic symptoms
-* guilt about avoiding child's medical appointments
-* history of depression
-
----
-
-## Assessment Measures
-
-| Measure                           | Baseline         | Follow-up      |
-| --------------------------------- | ---------------- | -------------- |
-| **Beck Anxiety Inventory**        | 41 (severe)      | 7 (low)        |
-| **Fear Survey Schedule II**       | terror for blood | no severe fear |
-| **Blood-Injection Symptom Scale** | 17/17 symptoms   | 4/17 symptoms  |
-
----
-
-## Therapy Structure
-
-### Applied Tension Procedure
-
-1. Sit comfortably
-2. Tense muscles (arms, legs, torso)
-3. Hold **10–15 sec**
-4. Relax **20–30 sec**
-5. Repeat **5 times**
-
----
-
-### Therapy Components
-
-| Component               | Purpose                   |
-| ----------------------- | ------------------------- |
-| Psychoeducation         | understand anxiety        |
-| Self-monitoring         | record reactions          |
-| Cognitive restructuring | challenge thinking errors |
-| Graduated exposure      | gradual exposure to fear  |
-
----
-
-### Exposure Examples
-
-| Task                    | Outcome                 |
-| ----------------------- | ----------------------- |
-| Watch blood test videos | anxiety reduced         |
-| Finger-prick test       | tolerated               |
-| Visit blood bank        | anxiety dropped to zero |
-| Personal blood test     | successful              |
-
----
-
-### SUDS (Subjective Units of Discomfort Scale)
-
-Range: **0–100**
-
-Used to measure anxiety during exposure.
-
----
-
-### Example Progress
-
-| Situation        | SUDS    |
-| ---------------- | ------- |
-| Watch blood test | 35 → 20 |
-| Finger prick     | 45 → 20 |
-| Blood bank visit | 65 → 30 |
-| Blood test       | 40 → 0  |
-
----
-
-### Outcome
-
-After therapy:
-
-* attended medical appointments
-* anxiety greatly reduced
-* maintained improvements **12 months later**
-
----
-
-### Conclusion
-
-CBT + AT worked because of:
-
-* **psychoeducation**
-* **self-monitoring**
-* **graduated exposure**
-* increased **self-efficacy**
-
----
-
-## Evaluation
-
-| Strength                                            | Weakness                 |
-| --------------------------------------------------- | ------------------------ |
-| **Triangulation** (qualitative + quantitative data) | Self-report bias         |
-| Detailed case history                               | No control group         |
-| Useful for clinical understanding                   | Limited generalisability |
-
----
-
-### Ethical Strengths
-
-* anonymity protected
-* therapy progressed at patient pace
-* major improvement in quality of life
-
----
-
-### Application to Everyday Life
-
-The study shows:
-
-* BII phobia can be treated successfully
-* treatment can occur in **community settings**
-* therapy may require **specialist clinics**
-
----
-
-## Issues & Debates
-
-### Idiographic vs Nomothetic
-
-| Approach        | Meaning                       |
-| --------------- | ----------------------------- |
-| **Idiographic** | detailed study of individuals |
-| **Nomothetic**  | large samples, general laws   |
-
-Chapman & DeLapp used an **idiographic approach**.
-
-But a **nomothetic study** could:
-
-* compare many patients
-* calculate average treatment success
-
----
-
-## Exam Answer Skeleton (10-mark evaluation)
-
-**Evaluate Chapman & DeLapp (2013).**
-
-1. Briefly outline study (method + participant)
-
-2. Strength
-   * triangulation of quantitative + qualitative data
-   * increases credibility
-
-3. Strength
-   * detailed case history allows clinicians to judge generalisation
-
-4. Weakness
-   * self-report SUDS may be biased
-
-5. Weakness
-   * no control group → expectancy effects possible
-
-6. Conclude with judgement about **generalisability and usefulness**
-
----
-
-> Exam Tip: Always include specific numbers (e.g., SUDS scores, sample sizes) and methodological terminology (validity, reliability, generalisability).
-
----
-
-# Weinstein (1980) — Optimistic Bias
-
-### One-liner
-
-People believe **good things are more likely and bad things less likely to happen to them** compared with others.
-
----
-
-### Study Overview
-
-| Category   | Details                                                                                   |
-| ---------- | ----------------------------------------------------------------------------------------- |
-| **Aim**    | Investigate whether people think **negative events are less likely for them** than others |
-|            | Also test whether **perceived control increases optimism bias**                           |
-| **Sample** | American **college students**                                                             |
-| **Method** | Comparative rating of **42 life events**                                                  |
-| **Design** | Two groups: **comparative rating group** and **event characteristics group**              |
-
----
-
-### Comparative Rating Group (Study 1)
-
-Participants estimated their chance of events compared with classmates.
-
-| Feature             | Details                                           |
-| ------------------- | ------------------------------------------------- |
-| **Life events**     | 42 total                                          |
-| **Positive events** | 18 (e.g., owning your own home)                   |
-| **Negative events** | 24 (e.g., being fired)                            |
-| **Rating scale**    | From **100% less likely** to **100% more likely** |
-
-Instructions:
-
-> "Compared to other students **of the same sex**, what are the chances this event will happen to you?"
-
----
-
-### Randomisation Procedure
-
-The 42 events were divided into **two rating forms**.
-
-| Form       | Content   |
-| ---------- | --------- |
-| **Form A** | 21 events |
-| **Form B** | 21 events |
-
-These were **randomly distributed** to students.
-
----
-
-### Event Characteristics Group
-
-Another group rated the events differently.
-
-| Feature          | Details                                                      |
-| ---------------- | ------------------------------------------------------------ |
-| **Participants** | 120 female psychology students                               |
-| **Task**         | Estimate **probability events occur to university students** |
-
-They also rated each event on:
-
-| Variable                | Scale                                               |
-| ----------------------- | --------------------------------------------------- |
-| **Controllability**     | 1 = no control → 5 = completely controllable        |
-| **Desirability**        | 1 = extremely undesirable → 5 = extremely desirable |
-| **Personal experience** | 1 = never known → 5 = happened to me multiple times |
-
----
-
-### Results
-
-| Finding                               | Explanation                                        |
-| ------------------------------------- | -------------------------------------------------- |
-| **37/42 events showed optimism bias** | Positive events seen as **more likely**            |
-|                                       | Negative events seen as **less likely**            |
-| **Variation between events**          | Not all events showed bias                         |
-| **No difference for some events**     | e.g., *not ill all winter* or *victim of burglary* |
-
-Correlations found:
-
-| Relationship                              | Meaning                                  |
-| ----------------------------------------- | ---------------------------------------- |
-| **Positive events ↔ desirability**        | More desirable events judged more likely |
-| **Negative events ↔ perceived control**   | More control → lower perceived risk      |
-| **Negative events ↔ personal experience** | Experience influenced risk judgments     |
-
-Participants often compared themselves to **stereotypical victims**.
-
-Example thinking:
-
-> "People who get fired are irresponsible — I'm not like that."
-
----
-
-### Conclusion
-
-Unrealistic optimism occurs when:
-
-| Condition                 | Effect                                 |
-| ------------------------- | -------------------------------------- |
-| **Event is controllable** | People believe they can **avoid it**   |
-| **Emotional investment**  | People want the outcome to be positive |
-
-**Desirability did NOT influence unrealistic optimism for negative events**, even **life-threatening ones**.
-
----
-
-### Evaluation
-
-| Strength                                                                                | Weakness                                             |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| **Nomothetic approach** allows identification of **general patterns** in optimism bias  | Sample only **American university students**         |
-| Demonstrates unrealistic optimism as **systematic cognitive bias**                      | **Age bias** — young adults may be more optimistic   |
-| Allows **generalisation within similar populations**                                    | Cultural bias — may differ in collectivist cultures  |
-
-Cultural differences evidence (Heine & Lehman, 1995):
-
-| Culture                                     | Typical tendency              |
-| ------------------------------------------- | ----------------------------- |
-| **Individualistic cultures** (e.g., Canada) | More **unrealistic optimism** |
-| **Collectivistic cultures** (e.g., Japan)   | Less optimism bias            |
-
-Further evaluation (Jefferson et al., 2017):
-
-| Strength                                          | Weakness                                                                  |
-| ------------------------------------------------- | ------------------------------------------------------------------------- |
-| Reduces **stress and worry**, improving wellbeing | Debate whether optimism bias reflects **true belief or wishful thinking** |
-| Helpful during crises like **Covid-19**           | Difficult to measure whether beliefs are actually **irrational**          |
-| Can improve **mental resilience**                 | Measurement validity may be **questionable**                              |
-
----
-
-# Cicero et al. (2007)
-
-| Aspect | Details                                |
-| ------ | -------------------------------------- |
-| Method | Field study                            |
-| Tool   | Questionnaire                          |
-| Focus  | Charismatic leadership vs productivity |
-| Result | **Positive correlation**               |
-
-Because it used **quantitative data**, results are objective, statistically analysable, and more reliable. Provides research support for charismatic leadership theory.
-
----
-
-# Rubin et al. (2005)
-
-| Aspect     | Details                                         |
-| ---------- | ----------------------------------------------- |
-| Finding    | Transformational leaders rated highly effective |
-| Result     | Increased productivity                          |
-| Conclusion | Strong support for the theory                   |
-
-Provides evidence that transformational leadership improves both leader effectiveness ratings and organisational productivity.
-
----
-
-# Cuadrado et al. (2008) — Leadership Styles
-
-## One-liner
-
-Leaders using **stereotypically female leadership styles were evaluated more positively** than male styles.
-
----
-
-## Study summary
-
-| Aspect | Details                                                |
-| ------ | ------------------------------------------------------ |
-| Aim    | Test **role congruity theory** of leadership prejudice |
-| Sample | **136 social psychology students**                     |
-| Design | Experiment with **4 conditions**                       |
-| Method | Narrative describing leader behaviour                  |
-| DV     | Leadership ratings via questionnaire                   |
-
----
-
-## Four experimental conditions
-
-| Condition                    |
-| ---------------------------- |
-| Female leader + male style   |
-| Male leader + male style     |
-| Female leader + female style |
-| Male leader + female style   |
-
----
-
-## Dependent measures
-
-Participants rated:
-
-| Measure                  |
-| ------------------------ |
-| Adjective list           |
-| Leadership capacity      |
-| Leadership effectiveness |
-
-All using **7-point rating scales**.
-
----
-
-## Results
-
-| Finding                                       |
-| --------------------------------------------- |
-| Female leadership style rated most positively |
-| Male style rated less favourably              |
-| No difference between male and female leaders |
-| Evaluator gender made little difference       |
-
----
-
-## Conclusions
-
-- Female leaders **not evaluated worse than men**
-- Male evaluators **did not favour male leaders**
-- **Female leadership style preferred**
-
----
-
-## Evaluation
-
-| Strength                              | Weakness                               |
-| ------------------------------------- | -------------------------------------- |
-| Quantitative data — objective         | Artificial narrative task              |
-| Standardised procedure — replicable   | Student sample — low generalisability  |
-
----
-
-## Issues and Debates links
-
-| Debate       | Explanation                          |
-| ------------ | ------------------------------------ |
-| Nomothetic   | Uses experiments and questionnaires  |
-| Reductionism | Breaks leadership into rating scales |
-
----
-
-# Claypoole & Szalma (2019) — Electronic Performance Monitoring
-
----
-
-## One-liner
-
-**Electronic monitoring increased accuracy, reduced errors, and sped up responses in a sustained attention task.**
-
----
-
-## Aim
-
-To determine whether **social facilitation effects occur with electronic monitoring** during a **vigilance task**.
-
----
-
-## Methodology
-
-**Laboratory experiment**
-
-Two conditions:
-
-| Condition           | Description             |
-| ------------------- | ----------------------- |
-| Control             | No monitoring           |
-| Electronic presence | Webcam + video recorder |
-
----
-
-## Sample
-
-| Feature      | Details                       |
-| ------------ | ----------------------------- |
-| Participants | 106                           |
-| Age          | Mean = 20.57 (range 18–37)    |
-| Gender       | 65 female, 41 male            |
-| Recruitment  | Psychology experiment website |
-| Type         | Undergraduate volunteers      |
-| Incentive    | Course credit                 |
-| Allocation   | Random assignment             |
-
-All participants were **university students in the Southern USA**.
-
----
-
-## Procedure
-
-### Preparation
-
-Participants:
-
-* surrendered **phones and watches**
-* randomly assigned to condition
-
-### Conditions
-
-| Control            | Electronic Presence                 |
-| ------------------ | ----------------------------------- |
-| Alone in room      | Webcam + video recorder             |
-| No cameras         | Webcam sends **live feed**          |
-| No social presence | Recording said to be reviewed later |
-
-**Nothing was actually recorded — deception was used.**
-
-### Vigilance task
-
-Participants watched a screen with **two-digit numbers**.
-
-They pressed **spacebar** when a **critical signal** appeared.
-
-Critical signal examples:
-
-| Example | Reason         |
-| ------- | -------------- |
-| 77      | difference = 0 |
-| 65      | difference = 1 |
-| 01      | difference = 1 |
-
-### Timing
-
-| Stage             | Duration   |
-| ----------------- | ---------- |
-| Practice          | 3 minutes  |
-| Main task         | 24 minutes |
-| Signals per 6 min | 5          |
-| Total signals     | 20         |
-
-Numbers displayed for **1000 ms**. Participants could respond anytime in that window.
-
----
-
-## Results
-
-| Measure                | Electronic presence | Control |
-| ---------------------- | ------------------- | ------- |
-| **Correct detections** | 0.6906              | 0.6038  |
-| **False alarms**       | 0.0059              | 0.0201  |
-| **Response time (ms)** | 767.34              | 802.02  |
-
-### Main findings
-
-Participants being monitored:
-
-* detected **more signals**
-* made **fewer false alarms**
-* responded **faster**
-
-### Vigilance decline
-
-Across both groups, **performance decreased over time** — consistent with previous vigilance research.
-
----
-
-## Conclusion
-
-Electronic monitoring:
-
-* **Improves performance on sustained attention tasks**
-* Works through **social facilitation**
-
-Video monitoring was found to be:
-
-* **effective**
-* **less intrusive** than other monitoring types
-
----
-
-## Evaluation
-
-### Methodological strengths
-
-| Strength              | Explanation                      |
-| --------------------- | -------------------------------- |
-| Laboratory experiment | High control and standardisation |
-| Controlled variables  | Only difference = monitoring     |
-| Quantitative data     | Response times, detections       |
-| Replicable            | Same procedure can be repeated   |
-
-### Methodological weaknesses
-
-| Weakness                | Explanation                        |
-| ----------------------- | ---------------------------------- |
-| Sample bias             | Undergraduate students             |
-| Response bias           | Volunteers from experiment website |
-| Low ecological validity | Task not realistic                 |
-| Artificial task         | Watching numbers unlike real work  |
-
-Real tasks like driving or medical screening may produce **different results**.
-
----
-
-## Ethics
-
-| Ethical issue     | Explanation                         |
-| ----------------- | ----------------------------------- |
-| Informed consent  | Participants consented              |
-| Confidentiality   | Data anonymous                      |
-| Deception         | Told they were recorded             |
-| Debriefing        | Explained after experiment          |
-| Possible pressure | Course credit may reduce withdrawal |
-
-Ethical concern in real workplaces: constant monitoring may cause **stress, anxiety, and reduced wellbeing**.
-
----
-
-## Issues & Debates
-
-### Application to everyday life
-
-Monitoring technologies like webcams and CCTV could **increase productivity**. However, constant surveillance may increase stress and decrease performance.
-
-### Cultural differences
-
-Different cultures may respond differently to monitoring due to:
-
-* surveillance norms varying
-* different work cultures
-* differing familiarity with cameras
-
-Some cultures may feel **less anxious about monitoring**.
-
-### Link to other research
-
-Study connects to **Bateson et al. (2006)**: even **pictures of eyes** increased honesty in a workplace honesty box — people behave better when they **feel watched**.
-
----
-
-## 6-Mark Exam Skeleton
-
-**Describe Claypoole & Szalma (2019)**
-
-1. **Aim** — Investigate whether **electronic monitoring improves performance** on a vigilance task.
-2. **Method** — Laboratory experiment with **two conditions**: control vs **electronic presence**.
-3. **Sample** — **106 undergraduate volunteers** from a university in the Southern USA.
-4. **Procedure** — Participants completed **24-minute vigilance task** detecting two-digit signals.
-5. **Manipulation** — Electronic presence condition used **webcam and video recorder**.
-6. **Findings** — Monitored participants had **higher detection rates, fewer false alarms and faster response times**.
-
----
-
-# Swat (1997) — Workplace Accidents & Safety
-
-## One-liner
-
-Improving accident monitoring systems can **prevent workplace accidents**.
-
-## Study Summary
-
-| Field    | Detail                              |
-| -------- | ----------------------------------- |
-| Aim      | Develop better accident monitoring  |
-| Method   | Longitudinal case study             |
-| Duration | 1994–1997                           |
-| Sample   | 4 industrial plants                 |
-| Workers  | 2964 employees                      |
-
-## Results
-
-Accident frequency rates by plant:
-
-| Plant           | Rate |
-| --------------- | ---- |
-| Foundry         | 5.9  |
-| Machinery       | 2.1  |
-| Meat processing | 2.8  |
-| Furniture       | 2.3  |
-
-## Main Causes of Accidents
-
-| Cause             | %       |
-| ----------------- | ------- |
-| Poor supervision  | 89%     |
-| Poor organisation | High    |
-| Technical factors | 11%     |
-| Worker error      | Present |
-
-## Key Discovery
-
-**Housekeeping problems caused many accidents.**
-
-Examples:
-
-- Slippery floors
-- Broken stairs
-- Poor tools
-- Unsafe clothing
-
-## Major Finding
-
-Up to **95% of incidents were not reported**.
